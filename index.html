@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oky Nurdianto — Creative Director</title>
+<meta name="description" content="Portofolio Oky Nurdianto, Creative Director — studi kasus campaign konten berbasis riset audiens.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#171b1f;
+    --bg-panel:#1d2226;
+    --ink:#ece8de;
+    --ink-muted:#8b9198;
+    --accent:#ffb800;
+    --accent-2:#ff5a36;
+    --line:#2a3036;
+    --font-display:'Big Shoulders Display', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  /* NAV */
+  header.site{
+    padding:28px 0;
+    border-bottom:1px solid var(--line);
+  }
+  header.site .wrap{display:flex; justify-content:space-between; align-items:center;}
+  .brand{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:20px;
+    letter-spacing:0.01em;
+    text-decoration:none;
+  }
+  nav.links{display:flex; gap:28px; font-size:15px;}
+  nav.links a{text-decoration:none; color:var(--ink-muted); transition:color .15s ease;}
+  nav.links a:hover{color:var(--ink);}
+
+  /* HERO */
+  .hero{padding:96px 0 88px; border-bottom:1px solid var(--line);}
+  .hero h1{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(40px, 6vw, 76px);
+    line-height:1.03;
+    letter-spacing:-0.01em;
+    margin:0 0 28px;
+    max-width:15ch;
+    opacity:0;
+    transform:translateY(14px);
+    animation:rise .7s ease forwards;
+  }
+  .hero p.sub{
+    font-size:clamp(17px, 2vw, 20px);
+    color:var(--ink-muted);
+    max-width:52ch;
+    margin:0 0 44px;
+    opacity:0;
+    transform:translateY(14px);
+    animation:rise .7s ease .12s forwards;
+  }
+  .hero .stat-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0;
+    border-top:1px solid var(--line);
+    opacity:0;
+    transform:translateY(14px);
+    animation:rise .7s ease .24s forwards;
+  }
+  .hero .stat-row .stat{
+    flex:1 1 180px;
+    padding:22px 24px 0 0;
+    border-left:2px solid var(--accent);
+    padding-left:16px;
+    margin-top:22px;
+  }
+  .hero .stat-row .stat:first-child{border-left:2px solid var(--accent);}
+  .hero .stat-row .stat .num{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:clamp(24px,3vw,32px);
+    display:block;
+  }
+  .hero .stat-row .stat .label{
+    font-size:13.5px;
+    color:var(--ink-muted);
+  }
+  @keyframes rise{to{opacity:1; transform:translateY(0);}}
+
+  /* ABOUT */
+  .about{padding:72px 0; border-bottom:1px solid var(--line);}
+  .about .grid{display:grid; grid-template-columns:1fr 2fr; gap:48px;}
+  .about h2{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:22px;
+    margin:0;
+  }
+  .about p{
+    font-size:16.5px;
+    color:var(--ink-muted);
+    margin:0 0 16px;
+    max-width:62ch;
+  }
+  .about p:last-child{margin-bottom:0;}
+
+  /* CASE STUDY */
+  .case{padding:80px 0 40px;}
+  .case-head{margin-bottom:56px;}
+  .case-head .tag{
+    color:var(--accent);
+    font-size:15px;
+    font-weight:600;
+    margin:0 0 10px;
+  }
+  .case-head h2{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(30px,4vw,44px);
+    margin:0 0 18px;
+    line-height:1.06;
+  }
+  .case-head p{
+    font-size:17px;
+    color:var(--ink-muted);
+    max-width:64ch;
+    margin:0;
+  }
+
+  .act{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:36px;
+    padding:44px 0;
+    border-top:1px solid var(--line);
+  }
+  .act:last-of-type{border-bottom:1px solid var(--line);}
+  .act .num{
+    font-family:var(--font-display);
+    font-weight:900;
+    font-size:72px;
+    line-height:1;
+    color:var(--accent);
+  }
+  .act .content h3{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:26px;
+    margin:0 0 6px;
+  }
+  .act .content .role-note{
+    font-size:14px;
+    color:var(--accent-2);
+    margin:0 0 16px;
+    font-weight:500;
+  }
+  .act .content p{
+    font-size:16px;
+    color:var(--ink-muted);
+    max-width:64ch;
+    margin:0 0 22px;
+  }
+  .pieces{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .piece{
+    display:grid;
+    grid-template-columns:1fr auto auto;
+    gap:16px;
+    align-items:baseline;
+    padding:14px 18px;
+    background:var(--bg-panel);
+    border-left:2px solid var(--line);
+  }
+  .piece a{
+    text-decoration:none;
+    font-size:15px;
+    font-weight:500;
+    border-bottom:1px solid transparent;
+  }
+  .piece a:hover{border-bottom:1px solid var(--ink);}
+  .piece .platform{
+    font-size:13px;
+    color:var(--ink-muted);
+  }
+  .piece .views{
+    font-size:13px;
+    color:var(--ink-muted);
+    white-space:nowrap;
+  }
+  .piece .sales{
+    font-size:13px;
+    color:var(--accent);
+    white-space:nowrap;
+    font-weight:600;
+  }
+
+  /* RESULTS BAND */
+  .results{
+    padding:64px 0;
+    background:var(--bg-panel);
+  }
+  .results .wrap > p.lead{
+    font-size:17px;
+    color:var(--ink-muted);
+    max-width:60ch;
+    margin:0 0 40px;
+  }
+  .results .stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:0;
+  }
+  .results .stats .stat{
+    border-left:2px solid var(--accent);
+    padding:0 20px 0 16px;
+  }
+  .results .stats .stat .num{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(28px,3.4vw,40px);
+    display:block;
+    line-height:1.05;
+  }
+  .results .stats .stat .label{
+    font-size:13.5px;
+    color:var(--ink-muted);
+    margin-top:6px;
+    display:block;
+  }
+
+  /* CONTACT */
+  .contact{padding:88px 0; text-align:left; border-top:1px solid var(--line);}
+  .contact h2{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(30px,4vw,44px);
+    margin:0 0 20px;
+    max-width:14ch;
+  }
+  .contact p{
+    font-size:17px;
+    color:var(--ink-muted);
+    max-width:52ch;
+    margin:0 0 32px;
+  }
+  .contact .cta{
+    display:inline-block;
+    background:var(--accent);
+    color:#171b1f;
+    font-weight:600;
+    font-size:16px;
+    text-decoration:none;
+    padding:14px 26px;
+    margin-right:12px;
+    margin-bottom:12px;
+  }
+  .contact .cta.outline{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--ink);
+  }
+  .contact .cta-row{margin-top:8px;}
+  footer.site{
+    padding:28px 0 40px;
+    color:var(--ink-muted);
+    font-size:13.5px;
+  }
+
+  @media (max-width:760px){
+    .about .grid{grid-template-columns:1fr; gap:16px;}
+    .act{grid-template-columns:1fr; gap:14px;}
+    .act .num{font-size:44px;}
+    .results .stats{grid-template-columns:repeat(2,1fr); row-gap:28px;}
+    .piece{grid-template-columns:1fr; gap:4px;}
+    nav.links{gap:18px; font-size:14px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">Oky Nurdianto</a>
+    <nav class="links">
+      <a href="#kerja">Kerja</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>Strategi konten yang mengubah keluhan konsumen jadi angka penjualan.</h1>
+    <p class="sub">Creative Director di Shoe Police — membangun campaign berbasis riset audiens untuk brand sneaker &amp; fashion, dari konsep sampai hasil yang terukur.</p>
+    <div class="stat-row">
+      <div class="stat"><span class="num">Rp92,2 jt</span><span class="label">tracked sales dari campaign Ortuseight</span></div>
+      <div class="stat"><span class="num">1,12 jt</span><span class="label">total views lintas platform</span></div>
+      <div class="stat"><span class="num">5+ tahun</span><span class="label">sebagai Creative Director</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap grid">
+    <h2>Tentang</h2>
+    <div>
+      <p>Sudah lebih dari 5 tahun menjabat Creative Director di Shoe Police, media sneaker &amp; fashion dengan basis audiens digital yang besar. Kerjaan sehari-hari mencakup riset audiens, penyusunan strategi konten, sampai eksekusi campaign untuk brand yang tap in ke Shoe Police.</p>
+      <p>Pendekatan yang dipegang: mulai dari masalah nyata yang dirasakan audiens, bukan dari brief semata — lalu susun strategi konten yang bisa dipertanggungjawabkan hasilnya, sampai ke angka penjualan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="case" id="kerja">
+  <div class="wrap">
+    <div class="case-head">
+      <p class="tag">Salah satu campaign yang dipimpin sebagai Creative Director</p>
+      <h2>Ortuseight Hyperblast 3.0 — Campaign Peluncuran Produk</h2>
+      <p>Ortuseight meluncurkan Hyperblast 3.0, pengembangan dari Hyperblast 2.0. Tantangannya: membuktikan ke audiens bahwa upgrade ini nyata, bukan sekadar klaim marketing. Strategi disusun dalam tiga babak, dimulai dari riset keluhan konsumen terhadap produk sebelumnya.</p>
+    </div>
+
+    <div class="act">
+      <div class="num">1</div>
+      <div class="content">
+        <h3>Keluhan</h3>
+        <p class="role-note">Riset independen dari followers, tanpa brief dari Ortuseight</p>
+        <p>Riset ke followers Shoe Police menemukan keluhan yang berulang: upper Hyperblast 2.0 gampang rusak. Insight ini yang jadi titik berangkat seluruh campaign — bukan pitch produk, tapi mengangkat masalah yang audiens sendiri sudah rasakan.</p>
+        <div class="pieces">
+          <div class="piece"><a href="https://www.instagram.com/reel/DWn9lPTgTiA/?stkn=Z3hqMG8wbzF0d2x6" target="_blank" rel="noopener">Kenapa Ortuseight Hyperblast 2.0 Jebol</a><span class="platform">Instagram Reels</span><span class="views">110.758 views</span></div>
+          <div class="piece"><a href="https://vt.tiktok.com/ZSqXu4X9g/" target="_blank" rel="noopener">Kenapa Ortuseight Hyperblast 2.0 Jebol</a><span class="platform">TikTok</span><span class="views">537.812 views</span></div>
+          <div class="piece"><a href="https://www.youtube.com/watch?v=75UEjsvhmMw" target="_blank" rel="noopener">Bedah Ortuseight Hyperblast 2.0</a><span class="platform">YouTube</span><span class="sales">Rp1.869.000 · 17 orders</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="num">2</div>
+      <div class="content">
+        <h3>Pembuktian</h3>
+        <p class="role-note">Konten dengan konversi penjualan tertinggi di campaign ini</p>
+        <p>Sepatu rusak milik warga ITH ditukar dengan Hyperblast 3.0, lalu dibedah untuk memverifikasi apakah upgrade yang diklaim benar-benar ada. Pendekatan ini yang membuat audiens sneaker — yang biasanya skeptis terhadap klaim marketing — percaya pada perbaikan produknya.</p>
+        <div class="pieces">
+          <div class="piece"><a href="https://vt.tiktok.com/ZSqXubsjV/" target="_blank" rel="noopener">Bedah Ortuseight Hyperblast 3.0</a><span class="platform">TikTok</span><span class="views">234.512 views</span></div>
+          <div class="piece"><a href="https://www.instagram.com/reel/DXZJcm5zyFx/?stkn=MmdlOWduOHN1dTJ1" target="_blank" rel="noopener">Bedah Ortuseight Hyperblast 3.0</a><span class="platform">Instagram Reels</span><span class="views">79.347 views</span></div>
+          <div class="piece"><a href="https://www.instagram.com/p/DXdWWr9Ab3_/?stkn=MnZ0czdib2VvbHp2" target="_blank" rel="noopener">Bahas Size Gede di Hyperblast 3.0</a><span class="platform">Instagram Carousel</span><span class="views">10.341 views</span></div>
+          <div class="piece"><a href="https://youtu.be/s0kVrAhy6Zg?si=u3hN5rl4fyjONBWg" target="_blank" rel="noopener">Bedah Ortuseight Hyperblast 3.0</a><span class="platform">YouTube Shorts</span><span class="sales">Rp3.780.000 · 12 orders</span></div>
+          <div class="piece"><a href="https://youtu.be/bJc7Lom66jk?si=FGWlPJbnQPZCCG75" target="_blank" rel="noopener">Bedah Ortuseight Hyperblast 3.0</a><span class="platform">YouTube Landscape</span><span class="sales">Rp61.707.000 · 249 orders</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="num">3</div>
+      <div class="content">
+        <h3>Keputusan</h3>
+        <p class="role-note">Menutup funnel dengan perbandingan langsung</p>
+        <p>Setelah masalah diangkat dan upgrade dibuktikan, campaign ditutup dengan perbandingan head-to-head Hyperblast 2.0 vs 3.0 — memberi audiens yang masih ragu satu alasan terakhir untuk memutuskan beli versi terbaru.</p>
+        <div class="pieces">
+          <div class="piece"><a href="https://www.instagram.com/reel/DY4RLcUzUxA/?stkn=MXhjdGNsYTlrd3kzMg==" target="_blank" rel="noopener">Versus Hyperblast 2.0 vs 3.0</a><span class="platform">Instagram Reels</span><span class="views">13.171 views</span></div>
+          <div class="piece"><a href="https://www.youtube.com/watch?v=k9ArfaHV7Hk" target="_blank" rel="noopener">Versus Hyperblast 2.0 vs 3.0</a><span class="platform">YouTube Shorts</span><span class="sales">Rp3.253.000 · 12 orders</span></div>
+          <div class="piece"><a href="https://www.youtube.com/watch?v=j5OOSvpp6zs" target="_blank" rel="noopener">Versus Hyperblast 2.0 vs 3.0</a><span class="platform">YouTube Landscape</span><span class="sales">Rp21.647.000 · 64 orders</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="results">
+  <div class="wrap">
+    <p class="lead">Hasil dihitung dari 11 konten lintas YouTube, Instagram, dan TikTok, berlangsung April–Mei 2026. Penjualan dilacak lewat affiliate link di YouTube Shoe Police.</p>
+    <div class="stats">
+      <div class="stat"><span class="num">1.119.483</span><span class="label">total views</span></div>
+      <div class="stat"><span class="num">Rp92.256.000</span><span class="label">tracked sales (YouTube)</span></div>
+      <div class="stat"><span class="num">354</span><span class="label">orders</span></div>
+      <div class="stat"><span class="num">~2 bulan</span><span class="label">durasi campaign</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontak">
+  <div class="wrap">
+    <h2>Mari diskusi.</h2>
+    <p>Terbuka untuk peran Brand Manager atau kolaborasi strategi konten. Kontak langsung lewat salah satu di bawah ini.</p>
+    <div class="cta-row">
+      <a class="cta" href="mailto:oqnt27@gmail.com">oqnt27@gmail.com</a>
+      <a class="cta outline" href="https://wa.me/6285183027929" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="cta outline" href="https://instagram.com/oqjawaa" target="_blank" rel="noopener">@oqjawaa</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <p>© 2026 Oky Nurdianto</p>
+  </div>
+</footer>
+
+</body>
+</html>
