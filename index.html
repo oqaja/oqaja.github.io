@@ -337,6 +337,13 @@
     line-height:0;
   }
   .dgrid button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  .dgrid a{
+    display:block;
+    background:var(--bg-panel);
+    line-height:0;
+  }
+  .dgrid a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  .dgrid a:hover img{opacity:.88;}
   .dgrid img{width:100%; height:auto; display:block;}
   dialog.lb{
     border:0;
@@ -413,7 +420,7 @@
       scroll-snap-type:x mandatory;
       padding-bottom:6px;
     }
-    .dgrid button{scroll-snap-align:start;}
+    .dgrid button,.dgrid a{scroll-snap-align:start;}
     nav.links{gap:18px; font-size:14px;}
   }
 </style>
@@ -486,16 +493,16 @@
     </div>
 
     <div class="dgrid thumbs">
-      <button type="button" data-full="img/thumb-ortuseight-hyperblast-2-0.jpg"><img src="img/thumb-ortuseight-hyperblast-2-0.jpg" alt="Thumbnail Bedah Ortuseight Hyperblast 2.0, pemakaian 1300 km" loading="lazy"></button>
-      <button type="button" data-full="img/thumb-ortuseight-hyperblast-3-0.jpg"><img src="img/thumb-ortuseight-hyperblast-3-0.jpg" alt="Thumbnail Bedah Ortuseight Hyperblast 3.0, emang enak buat lari jauh" loading="lazy"></button>
-      <button type="button" data-full="img/thumb-ortuseight-versus.jpg"><img src="img/thumb-ortuseight-versus.jpg" alt="Thumbnail Versus Hyperblast 2.0 vs 3.0, emang apa bedanya" loading="lazy"></button>
+      <a href="https://youtu.be/75UEjsvhmMw?si=xmGNsPplVDTgy-X0" target="_blank" rel="noopener" aria-label="Tonton di YouTube: Bedah Ortuseight Hyperblast 2.0"><img src="img/thumb-ortuseight-hyperblast-2-0.jpg" alt="Thumbnail Bedah Ortuseight Hyperblast 2.0, pemakaian 1300 km" loading="lazy"></a>
+      <a href="https://youtu.be/bJc7Lom66jk?si=MHomT2_wLR4nRAKD" target="_blank" rel="noopener" aria-label="Tonton di YouTube: Bedah Ortuseight Hyperblast 3.0"><img src="img/thumb-ortuseight-hyperblast-3-0.jpg" alt="Thumbnail Bedah Ortuseight Hyperblast 3.0, emang enak buat lari jauh" loading="lazy"></a>
+      <a href="https://youtu.be/j5OOSvpp6zs?si=IejYRki6Ivx2cu-2" target="_blank" rel="noopener" aria-label="Tonton di YouTube: Versus Hyperblast 2.0 vs 3.0"><img src="img/thumb-ortuseight-versus.jpg" alt="Thumbnail Versus Hyperblast 2.0 vs 3.0, emang apa bedanya" loading="lazy"></a>
     </div>
 
     <p class="case-links">
-      <span>Konten utama:</span>
-      <a href="https://vt.tiktok.com/ZSqXu4X9g/" target="_blank" rel="noopener">Kenapa Hyperblast 2.0 jebol (TikTok)</a>
-      <a href="https://youtu.be/bJc7Lom66jk?si=FGWlPJbnQPZCCG75" target="_blank" rel="noopener">Bedah Hyperblast 3.0 (YouTube)</a>
-      <a href="https://www.youtube.com/watch?v=j5OOSvpp6zs" target="_blank" rel="noopener">Versus 2.0 vs 3.0 (YouTube)</a>
+      <span>Tonton di YouTube:</span>
+      <a href="https://youtu.be/75UEjsvhmMw?si=xmGNsPplVDTgy-X0" target="_blank" rel="noopener">Bedah Hyperblast 2.0</a>
+      <a href="https://youtu.be/bJc7Lom66jk?si=MHomT2_wLR4nRAKD" target="_blank" rel="noopener">Bedah Hyperblast 3.0</a>
+      <a href="https://youtu.be/j5OOSvpp6zs?si=IejYRki6Ivx2cu-2" target="_blank" rel="noopener">Versus 2.0 vs 3.0</a>
     </p>
   </div>
 </section>
