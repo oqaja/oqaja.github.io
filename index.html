@@ -126,7 +126,46 @@ img{display:block}
 .khl .r{font-size:14px;font-weight:700;opacity:.8}
 .khl b{display:block;margin:6px 0 14px;font-family:var(--display);font-weight:800;font-size:clamp(34px,4.6vw,56px);line-height:1;letter-spacing:-.04em}
 .khl ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.khl .kgo{display:inline-block;margin-top:14px;padding:10px 16px;border-radius:99px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:14.5px}
 .khl li{padding:5px 12px;border-radius:99px;background:rgba(19,36,27,.12);font-size:14px;font-weight:600}
+:root{--peach:#FFD3C2}
+.t-abs{grid-column:7/13;background:var(--peach);min-height:340px}
+.t-abs .plus{background:var(--ink)}
+.t-abs h3{max-width:13ch}
+.t-abs .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.t-abs .chips span{padding:5px 12px;border:1.5px solid rgba(19,36,27,.4);border-radius:99px;font-size:13px;font-weight:700}
+.t-abs .nums{display:flex;gap:26px;margin-top:auto;padding-top:20px}
+.t-abs .nums b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(26px,3vw,40px);line-height:1;letter-spacing:-.03em}
+.t-abs .nums span{font-size:13px;opacity:.75}
+.t-abs .deco{width:210px;height:210px;right:-40px;top:60px;opacity:.12}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin:0 0 34px}
+.ba div{border-radius:24px;padding:24px;background:var(--paper)}
+.ba div+div{background:var(--mint)}
+.ba .r{font-size:14px;font-weight:700;color:var(--green)}
+.ba p{margin:6px 0 0;font-size:17px}
+.stepper{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:var(--gap);margin:0 0 20px;align-items:start}
+.stl{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.st{width:100%;display:flex;align-items:center;gap:14px;text-align:left;border:0;border-radius:18px;padding:12px 16px;background:var(--paper);color:var(--ink);font-family:inherit;font-size:16px;font-weight:600;cursor:pointer;transition:transform .3s cubic-bezier(.3,1.5,.5,1),background .25s}
+.st b{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:50%;background:var(--bg);font-family:var(--display);font-size:15px}
+.st:hover{transform:translateX(5px)}
+.st.done b{background:var(--ink);color:var(--paper)}
+.st.on{background:var(--yellow)}
+.st.on b{background:var(--ink);color:var(--paper)}
+.st.v::after{content:"verifikasi";margin-left:auto;font-size:12px;font-weight:700;padding:3px 9px;border-radius:99px;background:rgba(19,36,27,.1)}
+.stp{position:sticky;top:76px;background:var(--ink);color:var(--paper);border-radius:28px;padding:26px;min-height:300px;display:flex;flex-direction:column}
+.stp .n{font-family:var(--display);font-weight:800;font-size:clamp(90px,12vw,150px);line-height:.85;letter-spacing:-.05em;color:var(--yellow)}
+.stp h4{margin:18px 0 6px;font-family:var(--display);font-weight:800;font-size:clamp(26px,3vw,36px);line-height:1.05;letter-spacing:-.025em}
+.stp p{margin:0;opacity:.8;min-height:1.5em}
+.stp .bar{margin-top:auto;height:8px;border-radius:99px;background:rgba(248,250,250,.15);overflow:hidden}
+.stp .bar i{display:block;height:100%;width:0;background:var(--orange);border-radius:99px;transition:width .5s cubic-bezier(.2,.9,.3,1)}
+.stctl{display:flex;gap:8px;margin:0 0 34px}
+.stctl button{border:0;border-radius:99px;padding:11px 18px;font-weight:700;font-size:15px;cursor:pointer;background:var(--orange);color:#fff;font-family:inherit}
+.afs{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);margin:0 0 20px}
+.af{background:var(--paper);border-radius:22px;padding:22px;display:flex;flex-direction:column}
+.af h4{margin:0 0 6px;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em}
+.af p{margin:0 0 14px;color:var(--ink2);font-size:15.5px}
+.af .chipst{align-self:flex-start;margin-top:auto;padding:4px 12px;border-radius:99px;background:var(--mint);font-size:13px;font-weight:700}
+.af.soon .chipst{background:var(--yellow)}
 /* ---------- bento ---------- */
 .work{margin:0 var(--pad) var(--pad);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
 .work h2{grid-column:1/-1;margin:46px 10px 10px;font-family:var(--display);font-weight:800;font-size:clamp(30px,4.2vw,54px);letter-spacing:-.03em;line-height:1.05}
@@ -184,7 +223,7 @@ button.t-camp:hover .fan img:nth-child(3){transform:translate(26px,10px) rotate(
 .dl:hover{transform:scale(1.05)}
 .cvct{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 .cvct a{padding:9px 16px;border-radius:99px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:15px}
-.t-des{grid-column:7/13;background:var(--sky);min-height:300px}
+.t-des{grid-column:1/9;background:var(--sky);min-height:300px}
 .t-des h3{max-width:11ch}
 .t-des p{margin:12px 0 0;max-width:26ch;font-weight:500}
 .stackp{position:absolute;right:30px;bottom:-60px;width:min(54%,470px);height:340px}
@@ -195,9 +234,9 @@ button.t-camp:hover .fan img:nth-child(3){transform:translate(26px,10px) rotate(
 button.t-des:hover .stackp img:nth-child(1){transform:rotate(-15deg) translate(-16px,-14px)}
 button.t-des:hover .stackp img:nth-child(2){transform:rotate(1deg) translateY(-26px)}
 button.t-des:hover .stackp img:nth-child(3){transform:rotate(16deg) translate(16px,-14px)}
-.t-contact{grid-column:1/-1;background:var(--orange);min-height:220px}
+.t-contact{grid-column:9/13;background:var(--orange);min-height:300px}
 .t-contact h3{max-width:none}
-.t-contact .ln{margin-top:auto;padding-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start}
+.t-contact .ln{margin-top:auto;padding-top:22px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
 .t-contact a{display:inline-flex;padding:9px 16px;border-radius:99px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:15px;transition:transform .25s cubic-bezier(.3,1.5,.5,1)}
 .t-contact a:hover{transform:translateX(5px)}
 .foot{margin:6px var(--pad) 28px;padding:0 10px;color:var(--ink2);font-size:14px}
@@ -273,7 +312,9 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 
 @media (max-width:900px){
   .t-jal{flex-direction:column;grid-column:1/-1}
-  .t-kluk,.t-des{grid-column:1/-1}
+  .t-kluk,.t-des,.t-abs{grid-column:1/-1}
+  .ba,.stepper,.afs{grid-template-columns:1fr}
+  .stp{position:relative;top:0;min-height:0;order:-1}
   .khl{grid-template-columns:1fr}
   .jmini{margin:6px 0 0;max-width:420px;width:100%}
   .jm{grid-template-columns:1fr}
@@ -399,6 +440,14 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
     <div class="big">Rp97,0 jt</div>
     <p class="cap">sales dari 12 Shorts affiliate</p>
     <div class="nums"><div><b>553</b><span>order</span></div><div><b>204.366</b><span>views</span></div></div>
+  </button>
+
+  <button type="button" class="tile t-abs" data-open="absensi">
+    <span class="plus" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 2v14M2 9h14"/></svg></span>
+    <p class="lab">Sistem internal, inisiatif sendiri</p>
+    <h3>Absensi online lewat HP</h3>
+    <div class="chips"><span>PIN</span><span>QR code</span><span>Lokasi</span><span>Selfie</span></div>
+    <div class="nums"><div><b>10</b><span>karyawan</span></div><div><b>3 bln</b><span>berjalan</span></div><div><b>9</b><span>langkah</span></div></div>
   </button>
 
   <button type="button" class="tile t-des" data-open="desain">
@@ -533,7 +582,24 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <p class="lead">Campaign affiliate khusus format Shorts untuk brand Kluk. Serangkaian 12 Shorts mengarahkan penonton ke link affiliate, dan hasilnya dilacak dari views, order, dan sales.</p>
 <div class="pstats"><div><b>12</b><span>Shorts</span></div><div><b>204.366</b><span>views</span></div><div><b>553</b><span>order</span></div><div><b>Rp97,0 jt</b><span>total sales</span></div></div>
 <div class="fmt" style="margin-bottom:12px"><h4>Dua Shorts dengan sales terbesar</h4><p class="fdesc">Dua dari 12 Shorts menyumbang sekitar 37% dari total sales.</p></div>
-<div class="khl"><div><span class="r">Short #2</span><b>Rp18.324.857</b><ul><li>23.140 views</li><li>82 order</li></ul></div><div><span class="r">Short #9</span><b>Rp17.768.073</b><ul><li>27.782 views</li><li>87 order</li></ul></div></div>
+<div class="khl"><div><span class="r">Short #2</span><b>Rp18.324.857</b><ul><li>23.140 views</li><li>82 order</li></ul><a class="kgo" href="https://youtube.com/shorts/sQsfPwkNW5g" target="_blank" rel="noopener">Tonton Short</a></div><div><span class="r">Short #9</span><b>Rp17.768.073</b><ul><li>27.782 views</li><li>87 order</li></ul><a class="kgo" href="https://youtube.com/shorts/ff3qiGsieDg" target="_blank" rel="noopener">Tonton Short</a></div></div>
+</div></dialog>
+<dialog class="sheet" id="sheet-absensi" aria-labelledby="h-abs"><div class="sheet-in">
+<div class="sheet-bar"><span class="ttl">Sistem internal</span><button type="button" class="close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></div>
+<p class="tag">Inisiatif sendiri, Shoe Police</p>
+<h2 id="h-abs">Absensi online lewat HP untuk karyawan Shoe Police</h2>
+<p class="lead">Dulu karyawan harus fingerprint di kantor lain yang lokasinya cukup jauh dari kantor Shoe Police. Gue berinisiatif membangun sistem absensi online yang bisa dipakai lewat HP, supaya absen jadi lebih mudah untuk semua karyawan.</p>
+<div class="pstats"><div><b>10</b><span>karyawan pengguna</span></div><div><b>3 bulan</b><span>sudah berjalan</span></div><div><b>9</b><span>langkah absen</span></div><div><b>4</b><span>lapis verifikasi</span></div></div>
+<div class="ba"><div><span class="r">Dulu</span><p>Fingerprint di kantor yang berbeda, lokasinya cukup jauh dari kantor Shoe Police.</p></div><div><span class="r">Sekarang</span><p>Absen online lewat HP, dengan QR code di depan kantor Shoe Police.</p></div></div>
+<div class="fmt" style="margin-bottom:12px"><h4>Cara absen, 9 langkah</h4><p class="fdesc">Klik langkahnya atau putar alurnya. PIN, QR code, lokasi, dan selfie adalah empat lapis verifikasi.</p></div>
+<div class="stepper">
+<ol class="stl" style="list-style:none;margin:0;padding:0"><li><button type="button" class="st" data-i="0"><b>1</b><span>Buka aplikasi</span></button></li><li><button type="button" class="st v" data-i="1"><b>2</b><span>Masukkan PIN pribadi</span></button></li><li><button type="button" class="st" data-i="2"><b>3</b><span>Masuk ke card Absensi</span></button></li><li><button type="button" class="st" data-i="3"><b>4</b><span>Pilih jenis Absen masuk</span></button></li><li><button type="button" class="st v" data-i="4"><b>5</b><span>Scan QR code di kantor</span></button></li><li><button type="button" class="st v" data-i="5"><b>6</b><span>Lokasi dicek otomatis</span></button></li><li><button type="button" class="st v" data-i="6"><b>7</b><span>Foto selfie</span></button></li><li><button type="button" class="st" data-i="7"><b>8</b><span>Klik Input absen</span></button></li><li><button type="button" class="st" data-i="8"><b>9</b><span>Selesai</span></button></li></ol>
+<div class="stp" aria-live="polite"><span class="n">1</span><h4></h4><p></p><div class="bar"><i></i></div></div>
+</div>
+<div class="stctl"><button type="button" class="absplay">Putar alur</button></div>
+<div class="fmt" style="margin-bottom:12px"><h4>Fitur</h4></div>
+<div class="afs"><div class="af"><h4>Absensi karyawan</h4><p>Absen masuk lewat HP dengan PIN, QR, lokasi, dan selfie.</p><span class="chipst">Aktif</span></div><div class="af"><h4>Leaderboard</h4><p>Peringkat kehadiran karyawan.</p><span class="chipst">Aktif</span></div><div class="af"><h4>Dashboard HR</h4><p>HR mengecek semua absensi karyawan dalam satu tempat.</p><span class="chipst">Aktif</span></div><div class="af soon"><h4>Slip gaji</h4><p>Slip gaji karyawan yang dibuat otomatis.</p><span class="chipst">Dalam pengembangan</span></div></div>
+<p class="lead" style="margin-top:20px">Dibangun sebagai aplikasi web (PWA) yang bisa dipasang di HP.</p>
 </div></dialog>
 
 <dialog class="lb" id="lb" aria-label="Pratinjau gambar"><img id="lbimg" src="" alt=""><button type="button" class="close" id="lbclose"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></dialog>
@@ -560,7 +626,7 @@ var tiles = {};
 document.querySelectorAll("[data-open]").forEach(function(t){ tiles[t.dataset.open] = t; });
 var current = null;
 
-var COLORS = {ortuseight:"#FFC72C", program:"#1B4D38", desain:"#93D2EE", cv:"#F8FAFA", jalaton:"#BFE8CF", kluk:"#13241B"};
+var COLORS = {ortuseight:"#FFC72C", program:"#1B4D38", desain:"#93D2EE", cv:"#F8FAFA", jalaton:"#BFE8CF", kluk:"#13241B", absensi:"#FFD3C2"};
 
 function openSheet(id, fromTile, instant){
   var d = sheets[id]; if(!d || current === id) return;
@@ -811,6 +877,35 @@ function onOpen(){
     stop(); setPos(0); select(0); setPlaying(false);
     if(!RM){ setTimeout(function(){ if(dlg.open && idx === 0 && !playing) play(); }, 1100); }
   } else if(!dlg.open && wasOpen){ wasOpen = false; stop(); }
+}
+new MutationObserver(onOpen).observe(dlg, {attributes:true, attributeFilter:["open"]});
+onOpen();
+})();
+
+(function(){
+var dlg = document.getElementById("sheet-absensi"); if(!dlg) return;
+var S = [{"t": "Buka aplikasi", "d": "", "v": false}, {"t": "Masukkan PIN pribadi", "d": "PIN dibuat per karyawan sebelumnya.", "v": true}, {"t": "Masuk ke card Absensi", "d": "", "v": false}, {"t": "Pilih jenis Absen masuk", "d": "", "v": false}, {"t": "Scan QR code di kantor", "d": "QR code disiapkan di depan kantor Shoe Police.", "v": true}, {"t": "Lokasi dicek otomatis", "d": "Sistem memeriksa lokasi tanpa input manual.", "v": true}, {"t": "Foto selfie", "d": "Karyawan mengambil selfie sebagai bukti kehadiran.", "v": true}, {"t": "Klik Input absen", "d": "", "v": false}, {"t": "Selesai", "d": "Absensi tercatat.", "v": false}];
+var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+var btns = Array.prototype.slice.call(dlg.querySelectorAll(".st")), pn = dlg.querySelector(".stp .n"), ph = dlg.querySelector(".stp h4"), pp = dlg.querySelector(".stp p"), pb = dlg.querySelector(".stp .bar i"), play = dlg.querySelector(".absplay");
+var cur = 0, timer = null;
+function show(i){
+  cur = i; pn.textContent = i + 1; ph.textContent = S[i].t; pp.textContent = S[i].d || "";
+  pb.style.width = Math.round((i + 1) / S.length * 100) + "%";
+  btns.forEach(function(b, k){ b.classList.toggle("on", k === i); b.classList.toggle("done", k < i); });
+}
+function stop(){ if(timer){ clearInterval(timer); timer = null; } play.textContent = cur >= S.length - 1 ? "Putar ulang" : "Putar alur"; }
+function start(){
+  if(cur >= S.length - 1) show(0);
+  play.textContent = "Jeda";
+  timer = setInterval(function(){ if(cur >= S.length - 1){ stop(); return; } show(cur + 1); if(cur >= S.length - 1) stop(); }, 1100);
+}
+btns.forEach(function(b){ b.addEventListener("click", function(){ stop(); show(+b.dataset.i); }); });
+play.addEventListener("click", function(){ if(timer){ stop(); } else { start(); } });
+show(0);
+var was = false;
+function onOpen(){
+  if(dlg.open && !was){ was = true; stop(); show(0); if(!RM){ setTimeout(function(){ if(dlg.open && cur === 0 && !timer) start(); }, 1200); } }
+  else if(!dlg.open && was){ was = false; stop(); }
 }
 new MutationObserver(onOpen).observe(dlg, {attributes:true, attributeFilter:["open"]});
 onOpen();
