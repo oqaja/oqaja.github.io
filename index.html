@@ -54,6 +54,18 @@ img{display:block}
 .hint{position:relative;z-index:7;align-self:center;margin:18px 0 30px;padding:8px 16px;border-radius:99px;background:var(--ink);color:var(--paper);font-size:13.5px;font-weight:600;white-space:nowrap;pointer-events:none;transition:opacity .4s}
 .hint.gone{opacity:0}
 
+.marq{margin:0 var(--pad);background:var(--ink);color:var(--paper);border-radius:var(--r);overflow:hidden;padding:26px 0;border-top:1px solid rgba(248,250,250,.12)}
+.mtrack{display:flex;width:max-content;animation:mq 38s linear infinite;will-change:transform}
+.mtrack.alt{animation-direction:reverse;animation-duration:30s;margin-top:18px}
+.mtrack.alt .mi{color:var(--yellow)}
+.mtrack.alt .ms{fill:var(--paper)}
+.marq:hover .mtrack{animation-play-state:paused}
+.mseg{display:flex;align-items:center;flex:none}
+.mi{font-family:var(--display);font-weight:800;font-size:clamp(26px,3.4vw,44px);letter-spacing:-.025em;white-space:nowrap;color:rgba(248,250,250,.82);transition:color .25s}
+.mtrack:not(.alt) .mi:hover{color:var(--yellow)}.mtrack.alt .mi:hover{color:var(--paper)}
+.ms{flex:none;width:22px;height:22px;margin:0 clamp(26px,3.4vw,52px);fill:var(--yellow);opacity:.8}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mtrack{animation:none;flex-wrap:wrap;width:auto;padding:0 24px}.mseg+.mseg{display:none}.mtrack.alt{margin-top:10px}.mseg{flex-wrap:wrap;row-gap:12px}}
 /* ---------- bento ---------- */
 .work{margin:0 var(--pad) var(--pad);display:grid;grid-template-columns:repeat(12,1fr);gap:var(--gap)}
 .work h2{grid-column:1/-1;margin:46px 10px 10px;font-family:var(--display);font-weight:800;font-size:clamp(30px,4.2vw,54px);letter-spacing:-.03em;line-height:1.05}
@@ -92,6 +104,25 @@ button.t-camp:hover .fan img:nth-child(3){transform:translate(26px,10px) rotate(
 .t-about p{margin:0;font-size:17px}
 .t-about p+p{margin-top:12px;color:var(--ink2);font-size:15.5px}
 .t-about strong{font-family:var(--display);font-weight:800;font-size:clamp(28px,3vw,40px);letter-spacing:-.03em;line-height:1.05;display:block;margin-bottom:12px}
+.t-about{padding-right:84px}
+.t-about .lab{margin-bottom:12px}
+.cvhint{align-self:flex-start;margin-top:18px;padding:8px 16px;border-radius:99px;background:var(--ink);color:var(--paper);font-size:14px;font-weight:600}
+.cvsec{margin:0 0 30px}
+.cvsec h3{margin:0 0 12px;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+.cvbox{background:var(--paper);border-radius:24px;padding:26px 28px}
+.cvbox p{margin:0}
+.cvbox .cvrole{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.02em}
+.cvbox .when{color:var(--ink2);font-size:15px;margin:2px 0 14px}
+.cvbox ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.cvproj{display:grid;gap:var(--gap)}
+.cvproj .cvbox:nth-child(1){background:var(--yellow)}
+.cvproj .cvbox:nth-child(2){background:var(--green);color:#F2F6F3}
+.cvproj .cvbox:nth-child(3){background:var(--sky)}
+.cvproj b{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em;display:block;margin-bottom:6px}
+.dl{display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:12px 20px;border-radius:99px;background:var(--orange);color:#fff;font-weight:700;text-decoration:none;transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
+.dl:hover{transform:scale(1.05)}
+.cvct{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.cvct a{padding:9px 16px;border-radius:99px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:15px}
 .t-des{grid-column:1/9;background:var(--sky);min-height:300px}
 .t-des h3{max-width:11ch}
 .t-des p{margin:12px 0 0;max-width:26ch;font-weight:500}
@@ -221,6 +252,7 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
       <a href="#kerja">Kerja</a>
       <a href="#program" data-nav="program">Program</a>
       <a href="#desain" data-nav="desain">Desain</a>
+      <a href="#cv" data-nav="cv">CV</a>
       <a href="#kontak" class="cta">Kontak</a>
     </nav>
   </div>
@@ -239,6 +271,8 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <button type="button" class="card" data-full="img/ranking-pocari-sweat-run.jpg" aria-label="Perbesar: Kartu ranking podium 10K putra Pocari Sweat Run Bandung 2026"><img src="img/s/ranking-pocari-sweat-run.jpg" alt="Kartu ranking podium 10K putra Pocari Sweat Run Bandung 2026" width="520" height="693" draggable="false" decoding="async"></button>
   </div>
 </header>
+
+<section class="marq" aria-label="Keahlian dan tools"><div class="mtrack a"><div class="mseg"><span class="mi">Riset audiens</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Strategi konten</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Campaign planning</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Art direction</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Konsep visual</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Tone of voice</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Penulisan konten</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Talent di depan kamera</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Kemitraan brand</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Leadership</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Management</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg></div><div class="mseg" aria-hidden="true"><span class="mi">Riset audiens</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Strategi konten</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Campaign planning</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Art direction</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Konsep visual</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Tone of voice</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Penulisan konten</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Talent di depan kamera</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Kemitraan brand</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Leadership</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Management</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg></div></div><div class="mtrack b alt"><div class="mseg"><span class="mi">Canva</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Photoshop</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CorelDRAW</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CapCut</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Canva</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Photoshop</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CorelDRAW</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CapCut</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Canva</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Photoshop</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CorelDRAW</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CapCut</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg></div><div class="mseg" aria-hidden="true"><span class="mi">Canva</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Photoshop</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CorelDRAW</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CapCut</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Canva</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Photoshop</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CorelDRAW</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CapCut</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Canva</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">Photoshop</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CorelDRAW</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg><span class="mi">CapCut</span><svg class="ms" viewBox="0 0 24 24" aria-hidden="true"><use href="#s-star"/></svg></div></div></section>
 
 <main>
 <section class="work" id="kerja" aria-labelledby="kerja-h">
@@ -267,11 +301,14 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
     <div class="nums"><div><b>25</b><span>episode</span></div><div><b>1,26 jt</b><span>views</span></div><div><b>+6.487</b><span>subs</span></div></div>
   </button>
 
-  <div class="tile t-about">
+  <button type="button" class="tile t-about" data-open="cv">
+    <span class="plus" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 2v14M2 9h14"/></svg></span>
+    <p class="lab">Tentang dan CV</p>
     <strong>5+ tahun di Shoe Police</strong>
     <p>Creative Director yang memegang riset audiens, strategi konten, dan eksekusi campaign untuk brand yang tap in.</p>
     <p>Pendekatannya mulai dari masalah nyata yang dirasakan audiens, lalu strategi konten yang hasilnya bisa dipertanggungjawabkan sampai ke angka penjualan.</p>
-  </div>
+    <span class="cvhint">Buka CV</span>
+  </button>
 
   <button type="button" class="tile t-des" data-open="desain">
     <span class="plus" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 2v14M2 9h14"/></svg></span>
@@ -356,6 +393,34 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <div class="dgroup"><h3>Poster trivia</h3><p>Satu fakta atau temuan, dirangkum dalam judul di dalam balon kuning di atas foto.</p><div class="dgrid"><button type="button" data-full="img/trivia-toko-ngaco.jpg"><img src="img/s/trivia-toko-ngaco.jpg" alt="Poster trivia: deretan toko ngaco jual brand Indonesia kita" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/trivia-event-lari.jpg"><img src="img/s/trivia-event-lari.jpg" alt="Poster trivia: deretan event lari di Indonesia dengan label World Athletics" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/trivia-on-mbappe.jpg"><img src="img/s/trivia-on-mbappe.jpg" alt="Poster trivia: On memasak sampai berani rebut Mbappe dari Nike" loading="lazy" width="520" height="693"></button></div></div>
 <div class="dgroup"><h3>Kartu ranking dan perbandingan</h3><p>Data disusun dalam kartu putih berurutan, memperlihatkan siapa memakai sepatu apa atau seri produk yang dibandingkan.</p><div class="dgrid"><button type="button" data-full="img/ranking-utmb-2026.jpg"><img src="img/s/ranking-utmb-2026.jpg" alt="Kartu ranking sepatu podium UTMB 2026 kategori putra" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/ranking-hyperboost.jpg"><img src="img/s/ranking-hyperboost.jpg" alt="Kartu perbandingan Hyperboost Edge, Run, dan Lite" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/ranking-pocari-sweat-run.jpg"><img src="img/s/ranking-pocari-sweat-run.jpg" alt="Kartu ranking podium 10K putra Pocari Sweat Run Bandung 2026" loading="lazy" width="520" height="693"></button></div></div>
 </div></dialog>
+<dialog class="sheet" id="sheet-cv" aria-labelledby="h-cv"><div class="sheet-in">
+<div class="sheet-bar"><span class="ttl">CV</span><button type="button" class="close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></div>
+<p class="tag">Creative Director, Shoe Police</p>
+<h2 id="h-cv">Oky Nurdianto</h2>
+<p class="lead">Creative Director dengan 5+ tahun di Shoe Police, media sneaker dan fashion Indonesia. Terbiasa memegang alur penuh: riset keresahan audiens, strategi konten, konsep visual, sampai eksekusi campaign bersama brand. Lulusan S1 Manajemen yang kini menargetkan peran Brand Manager.</p>
+<div class="cvsec"><a class="dl" href="CV-Oky-Nurdianto.pdf" download>Unduh CV (PDF)</a></div>
+<div class="cvsec"><h3>Pengalaman</h3><div class="cvbox">
+<p class="cvrole">Creative Director, Shoe Police</p><p class="when">5+ tahun sampai sekarang</p>
+<ul>
+<li>Perencana utama konten: konsep visual, tone of voice, dan drafting isi konten.</li>
+<li>Riset keresahan pasar dari followers sebagai dasar ide konten dan campaign.</li>
+<li>Penghubung antara brand dan Shoe Police, dari ide sampai tayang.</li>
+<li>Beberapa kali tampil sebagai talent utama.</li>
+<li>Mengarahkan desain poster dan kartu konten Shoe Police dalam tiga format visual: rilisan, trivia, dan ranking.</li>
+<li>Mengembangkan program Detective Shoe (video investigasi YouTube) dari nol, sebagai developer, talent, dan periset.</li>
+</ul></div></div>
+<div class="cvsec"><h3>Proyek pilihan</h3><div class="cvproj">
+<div class="cvbox"><b>Ortuseight Hyperblast 3.0, campaign peluncuran produk</b><p>Dipegang penuh tanpa brief dari brand: riset keluhan upper Hyperblast 2.1 dari followers, tukar sepatu rusak warga dengan Hyperblast 3.0, konten bedah sepatu, lalu versus 2.1 vs 3.0. Hasilnya 1.123.164 views dan penjualan Rp92.256.000 (354 order) lewat link affiliate dalam sekitar 2 bulan.</p></div>
+<div class="cvbox"><b>The New Local Pride</b><p>Program 10 format konten untuk memberi panggung brand lokal, 8 format sudah tayang. Dari episode yang tampil di portofolio: 25 episode dengan total 1,26 juta views. Format ini sudah menarik minat tap in dari beberapa brand.</p></div>
+<div class="cvbox"><b>Art direction Shoe Police</b><p>Sembilan poster dalam tiga format visual.</p></div>
+</div></div>
+<div class="cvsec"><h3>Pendidikan</h3><div class="cvbox"><p class="cvrole">S1 Manajemen, STIE Pasundan</p><p class="when" style="margin:2px 0 0">Lulus 2025</p></div></div>
+<div class="cvsec"><h3>Kontak</h3><div class="cvct">
+<a href="mailto:oqnt27@gmail.com">oqnt27@gmail.com</a>
+<a href="https://wa.me/6285183027929" target="_blank" rel="noopener">WhatsApp</a>
+<a href="https://instagram.com/oqjawaa" target="_blank" rel="noopener">@oqjawaa</a>
+</div></div>
+</div></dialog>
 
 <dialog class="lb" id="lb" aria-label="Pratinjau gambar"><img id="lbimg" src="" alt=""><button type="button" class="close" id="lbclose"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></dialog>
 
@@ -381,7 +446,7 @@ var tiles = {};
 document.querySelectorAll("[data-open]").forEach(function(t){ tiles[t.dataset.open] = t; });
 var current = null;
 
-var COLORS = {ortuseight:"#FFC72C", program:"#1B4D38", desain:"#93D2EE"};
+var COLORS = {ortuseight:"#FFC72C", program:"#1B4D38", desain:"#93D2EE", cv:"#F8FAFA"};
 
 function openSheet(id, fromTile, instant){
   var d = sheets[id]; if(!d || current === id) return;
