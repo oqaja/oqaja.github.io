@@ -346,6 +346,152 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
   .jmpath,.wpulse{animation:none!important}
   *{transition:none!important;animation:none!important}
 }
+@font-face{font-family:"Oswald";src:url(fonts/oswald.woff2) format("woff2");font-weight:200 700;font-display:swap}
+@font-face{font-family:"Space Mono";src:url(fonts/spacemono.woff2) format("woff2");font-weight:700;font-display:swap}
+.demowrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:34px;align-items:start;margin:0 0 34px}
+.demoside{max-width:40ch}
+.demoside ol{margin:12px 0 18px;padding-left:20px;display:grid;gap:8px}
+.demoside .tagd{display:inline-block;padding:5px 12px;border-radius:99px;background:var(--yellow);font-size:13px;font-weight:700}
+.demoside button{border:0;border-radius:99px;padding:11px 18px;font-weight:700;font-size:15px;cursor:pointer;background:var(--paper);color:var(--ink);font-family:inherit}
+.phone{position:relative;width:360px;height:720px;border-radius:46px;border:9px solid var(--ink);background:#FAF0EB;overflow:hidden;box-shadow:0 30px 60px -24px rgba(19,36,27,.55);font-family:var(--body);color:#3A3550;--ap:#9FE5C8;--apd:#2F7A5A;--hd:"Oswald","Arial Narrow",sans-serif;--mono:"Space Mono",ui-monospace,monospace}
+.phone *{box-sizing:border-box}
+.phone .app{position:absolute;inset:0;overflow-y:auto;padding:26px 16px 110px;background-image:radial-gradient(rgba(90,80,120,.1) 1.2px,transparent 1.3px);background-size:22px 22px;scrollbar-width:none;animation:scin .28s ease-out}
+.phone .app::-webkit-scrollbar{display:none}
+@keyframes scin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.phone h1,.phone h2,.phone h3,.phone h4{font-family:var(--hd);font-weight:600;margin:0;color:#3A3550;letter-spacing:.01em}
+.phone .btn{width:100%;border:0;border-radius:99px;padding:14px;background:var(--ap);color:var(--apd);font-family:var(--hd);font-weight:600;font-size:19px;cursor:pointer;box-shadow:0 5px 0 #D8D2DE;transition:transform .15s,box-shadow .15s}
+.phone .btn:active{transform:translateY(4px);box-shadow:0 1px 0 #D8D2DE}
+.phone .btn.ol{background:#fff;border:2.5px solid var(--ap);box-shadow:none;color:#52AE87;margin-top:10px}
+.phone .card{background:#fff;border-radius:26px;padding:18px;box-shadow:0 10px 24px -14px rgba(60,50,90,.25)}
+.phone .sec{font-family:var(--hd);font-weight:600;font-size:19px;margin:22px 4px 10px;text-transform:uppercase;letter-spacing:.02em}
+.phone .lg{min-height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding-bottom:40px}
+.phone .lg-ic{font-size:54px;line-height:1}
+.phone .lg h3{font-size:30px;margin-bottom:12px}
+.phone .lgc{width:100%}
+.phone .lgc p{margin:0 0 12px;text-align:center;color:#7B7592;font-weight:600;font-size:15px}
+.phone input.in,.phone select.in{width:100%;padding:14px 16px;border-radius:16px;border:2px solid #DCCFE9;background:#F6EEFA;font-family:inherit;font-size:16px;color:#3A3550;margin-bottom:14px}
+.phone .shake{animation:shk .4s}
+@keyframes shk{20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.phone .hintp{margin:12px 0 0!important;font-size:13px!important;font-weight:500!important}
+.phone .gr{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.phone .gr small{color:#7B7592;font-weight:700;font-size:15px}
+.phone .gr h2{font-size:34px;line-height:1.1}
+.phone .gj{flex:none;text-align:center;font-size:11px;color:#7B7592;font-weight:600}
+.phone .gj b{display:block;background:#F5B5A0;border-radius:18px;padding:6px 14px;font-family:var(--hd);font-size:19px;color:#C0452A;box-shadow:0 4px 0 #E3A18D;margin-bottom:5px}
+.phone .qt{color:#7B7592;font-size:14.5px;margin:6px 0 4px;line-height:1.5}
+.phone .ds{display:flex;gap:9px;overflow-x:auto;padding:4px 2px 8px;scrollbar-width:none}
+.phone .ds::-webkit-scrollbar{display:none}
+.phone .dc{flex:none;width:54px;border-radius:20px;padding:9px 0 10px;text-align:center;border:1.5px solid rgba(0,0,0,.06)}
+.phone .dc small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.04em;color:#6D6784}
+.phone .dc b{font-family:var(--mono);font-size:17px}
+.phone .dc.t{background:var(--ap);box-shadow:0 5px 0 #84CBAC}
+.phone .big{display:block;width:100%;text-align:left;border:0;border-radius:28px;padding:20px 22px;color:#fff;margin-bottom:12px;position:relative;cursor:pointer;font-family:inherit}
+.phone .big h3{color:#fff;font-size:26px}
+.phone .big p{margin:6px 0 0;font-size:14.5px;opacity:.92;max-width:75%}
+.phone .big .em{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:46px}
+.phone .big.bl{background:linear-gradient(135deg,#4A90C8,#2F6A9B)}
+.phone .big.pu{background:linear-gradient(135deg,#8F6BD0,#6F45B8);display:flex;justify-content:space-between;align-items:center}
+.phone .big.pu p{max-width:none}
+.phone .rk{flex:none;border:2px solid rgba(255,255,255,.4);border-radius:18px;padding:10px 16px;text-align:center;background:rgba(255,255,255,.12)}
+.phone .rk b{display:block;font-family:var(--mono);font-size:22px}
+.phone .rk span{font-size:10.5px;font-weight:700;letter-spacing:.06em}
+.phone .tm{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px}
+.phone .tmc{display:flex;align-items:center;gap:10px;background:#fff;border-radius:22px;padding:14px;box-shadow:0 10px 24px -14px rgba(60,50,90,.25)}
+.phone .tmc i{flex:none;width:44px;height:44px;border-radius:50%;background:#F4ECFA;display:grid;place-items:center;font-style:normal;font-size:22px;border:1.5px solid #E2D7EE}
+.phone .tmc small{display:block;color:#7B7592;font-weight:600;font-size:13px}
+.phone .tmc b{font-family:var(--mono);font-size:20px}
+.phone .cal .hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.phone .cal .hd h4{font-size:22px}
+.phone .cal .hd span{color:#7B7592;font-weight:700;font-size:14px}
+.phone .cg{display:grid;grid-template-columns:repeat(7,1fr);text-align:center;row-gap:6px}
+.phone .cg .w{font-size:11px;font-weight:700;color:#B3AEC4;padding:6px 0}
+.phone .cg .d{position:relative;height:36px;display:grid;place-items:center;font-family:var(--mono);font-weight:700;font-size:14px}
+.phone .cg .d.p{color:#B3AEC4}
+.phone .cg .d.t span{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ap);box-shadow:0 5px 14px -4px #7BC7A6}
+.phone .cg .d.k::after{content:"";position:absolute;bottom:0;width:5px;height:5px;border-radius:50%;background:#7FD1AD}
+.phone .cs{border:2px dashed #DCD6E6;border-radius:26px;padding:26px;text-align:center;font-family:var(--hd);font-size:20px;font-weight:600;background:rgba(255,255,255,.6)}
+.phone .cs em{display:block;font-style:normal;font-size:40px;margin-bottom:4px}
+.phone .bn{position:absolute;left:10px;right:10px;bottom:14px;height:62px;border-radius:99px;background:#fff;display:flex;align-items:center;justify-content:space-around;padding:6px;box-shadow:0 10px 26px -10px rgba(60,50,90,.45);z-index:3}
+.phone .bn button{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;height:100%;border:0;background:none;border-radius:99px;font-size:22px;cursor:pointer;font-family:var(--hd);font-weight:600;color:#2F7A5A;transition:flex .3s}
+.phone .bn button.on{flex:1.9;background:var(--ap);box-shadow:0 4px 0 #BDB6C6}
+.phone .bn button span{font-size:16px;display:none}
+.phone .bn button.on span{display:inline}
+.phone .top{display:flex;align-items:center;gap:12px;margin:2px 0 14px;position:relative;justify-content:center}
+.phone .top .bk{position:absolute;left:0;width:40px;height:40px;border-radius:50%;border:0;background:#fff;box-shadow:0 4px 10px -4px rgba(60,50,90,.4);font-size:18px;cursor:pointer;color:#3A3550}
+.phone .top h3{font-size:26px}
+.phone .chipt{display:inline-flex;align-items:center;gap:10px;background:#F6EEFA;border:1.5px solid #DCCFE9;border-radius:99px;padding:9px 16px;font-weight:700;font-size:14.5px;margin-bottom:14px}
+.phone .chipt a{color:#2F9A6C;cursor:pointer;font-weight:700}
+.phone .lbl{font-size:12.5px;font-weight:800;letter-spacing:.06em;color:#8A849E;margin:12px 4px 8px}
+.phone .opt{display:block;width:100%;text-align:left;border:1.5px solid #DCCFE9;background:#F6EEFA;border-radius:20px;padding:16px 18px;font-family:inherit;font-weight:700;font-size:17px;color:#3A3550;margin-bottom:8px;cursor:pointer;transition:transform .2s,background .2s}
+.phone .opt:hover{background:#EFE4F8;transform:translateX(3px)}
+.phone .msg{text-align:center;color:#7B7592;font-weight:600;margin:4px 0 14px;font-size:15px}
+.phone .vf{position:relative;height:300px;border-radius:24px;overflow:hidden;background:linear-gradient(#2c2a36,#15131b);display:grid;place-items:center}
+.phone .vf .qr{width:150px;height:150px;background:#fff;border-radius:8px;padding:8px;opacity:.95}
+.phone .vf .co{position:absolute;width:46px;height:46px;border:5px solid #fff}
+.phone .vf .co.a{left:34px;top:34px;border-right:0;border-bottom:0}.phone .vf .co.b{right:34px;top:34px;border-left:0;border-bottom:0}
+.phone .vf .co.c{left:34px;bottom:34px;border-right:0;border-top:0}.phone .vf .co.d{right:34px;bottom:34px;border-left:0;border-top:0}
+.phone .vf .ln{position:absolute;left:44px;right:44px;height:3px;background:#7FD1AD;box-shadow:0 0 14px #7FD1AD;animation:scn 1.8s ease-in-out infinite alternate}
+.phone .vf.ok .ln{animation-duration:.5s}
+@keyframes scn{from{top:48px}to{top:250px}}
+.phone .vf .okb{position:absolute;inset:0;display:none;place-items:center;background:rgba(127,209,173,.9);font-size:64px}
+.phone .vf.ok .okb{display:grid}
+.phone .gpsb{margin-top:6px;background:#E3F7EE;border:1.5px solid #BFE8D3;border-radius:18px;padding:16px;text-align:center;color:#2F7A5A;font-weight:700;font-size:17px}
+.phone .gpsb small{display:block;margin-top:4px;font-size:12.5px;font-weight:600;opacity:.85}
+.phone .cam{position:relative;height:340px;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,#cdd6dc,#8e9aa5);display:grid;place-items:end center}
+.phone .cam svg{width:78%;height:auto;display:block}
+.phone .cam .nt{position:absolute;top:12px;left:12px;right:12px;text-align:center;background:rgba(19,36,27,.65);color:#fff;border-radius:99px;padding:6px 10px;font-size:12px;font-weight:600}
+.phone .cam .fl{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.phone .cam.flash .fl{animation:fl .5s}
+@keyframes fl{0%{opacity:.95}100%{opacity:0}}
+.phone .cam .okc{position:absolute;right:14px;bottom:14px;background:#52AE87;color:#fff;border-radius:99px;padding:6px 12px;font-size:12.5px;font-weight:700}
+.phone .dn{text-align:center;padding-top:20px}
+.phone .dn .ck{font-size:80px;line-height:1;animation:pop .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{from{transform:scale(.2)}to{transform:scale(1)}}
+.phone .dn .ms{margin:18px 0;background:#E3F7EE;border:1.5px solid #BFE8D3;border-radius:18px;padding:16px;color:#2F7A5A;font-weight:700;font-size:17px}
+.phone .pod{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:8px;align-items:end;margin:6px 0 18px;height:260px}
+.phone .pc{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.phone .pc .av{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#fff;font-family:var(--hd);font-size:24px;font-weight:600;border:3px solid}
+.phone .pc.f .av{width:64px;height:64px;border-color:#F4E3A1;color:#9A7A10}
+.phone .pc.s .av{border-color:#BCD7EE;color:#3C6A92}
+.phone .pc.t .av{border-color:#F2C2B4;color:#B25A44}
+.phone .pc .nm{font-weight:700;font-size:13px;margin:6px 0 4px}
+.phone .pc .pt{background:#fff;border-radius:99px;padding:3px 10px;font-size:12px;font-weight:700;box-shadow:0 3px 8px -4px rgba(0,0,0,.3);margin-bottom:-12px;position:relative;z-index:1}
+.phone .pc .bs{width:100%;border-radius:22px 22px 0 0;display:grid;place-items:center;font-family:var(--hd);font-size:34px;font-weight:600;padding-top:6px}
+.phone .pc.f .bs{height:130px;background:#FBF3D4;border:1.5px solid #F0DFA0;color:#9A7A10}
+.phone .pc.s .bs{height:96px;background:#E6F0F9;border:1.5px solid #CADFF0;color:#3C6A92}
+.phone .pc.t .bs{height:72px;background:#FBE6DF;border:1.5px solid #F2CFC4;color:#B25A44}
+.phone .lbx{padding:6px 14px}
+.phone .lr{display:flex;align-items:center;gap:14px;padding:14px 4px;border-bottom:1px solid #EEEAF3;transition:background .4s}
+.phone .lr:last-child{border:0}
+.phone .lr .rn{font-family:var(--hd);color:#B3AEC4;font-size:19px;width:24px}
+.phone .lr .av{width:44px;height:44px;border-radius:50%;background:#F4ECFA;border:1.5px solid #E2D7EE;display:grid;place-items:center;font-family:var(--hd);font-size:20px;color:#6C5C8F}
+.phone .lr b{display:block;font-size:15.5px}
+.phone .lr span{font-size:14px;color:#7B7592;font-weight:600}
+.phone .lr.me{background:#E3F7EE;border-radius:18px;margin:2px -8px;padding-left:12px;padding-right:12px;border-bottom:0}
+.phone .pf{display:flex;align-items:center;gap:16px;margin:4px 0 16px;padding-bottom:16px;border-bottom:2px dashed #D7D0E2}
+.phone .pf .av{position:relative;width:84px;height:84px;border-radius:50%;background:#fff;border:5px solid #9FE5C8;display:grid;place-items:center;font-family:var(--hd);font-size:38px;color:#2F7A5A}
+.phone .pf .av::after{content:"✏️";position:absolute;right:-6px;bottom:-4px;width:30px;height:30px;border-radius:50%;background:#9FE5C8;display:grid;place-items:center;font-size:14px;border:2px solid #fff}
+.phone .pf h2{font-size:30px}
+.phone .pf em{display:inline-block;font-style:normal;margin-top:6px;background:#E3F7EE;border:1.5px solid #BFE8D3;color:#2F7A5A;border-radius:99px;padding:5px 14px;font-family:var(--mono);font-size:12.5px;font-weight:700;letter-spacing:.06em}
+.phone .mb{display:flex;align-items:center;justify-content:space-between;width:100%;border:1.5px solid #DCCFE9;background:#F6EEFA;border-radius:20px;padding:16px 18px;font-weight:800;font-size:19px;color:#3A3550;margin-bottom:10px;font-family:inherit;cursor:pointer;text-align:left}
+.phone .mb.dis{opacity:.55;cursor:default;font-weight:700;background:#FAEFF6;border-color:#EFD9E8}
+.phone .mb small{border:1.5px solid #DCCFE9;border-radius:99px;padding:5px 12px;font-size:13px;font-weight:700;background:#fff;color:#8A849E}
+.phone .rk4{border:2.5px dashed #D7D0E2;border-radius:26px;padding:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.phone .rk4 div{border-radius:18px;padding:12px 2px;text-align:center;border:1.5px solid rgba(0,0,0,.05)}
+.phone .rk4 b{display:block;font-family:var(--mono);font-size:24px}
+.phone .rk4 span{font-size:10.5px;font-weight:700;letter-spacing:.04em}
+.phone .rk4 .h{background:#E3F7EE;color:#2F7A5A}.phone .rk4 .s{background:#FBF1D6;color:#8A6A12}.phone .rk4 .i{background:#EFE8FA;color:#6045A0}.phone .rk4 .l{background:#FBE4E1;color:#B53A2D}
+.phone .chart{background:#fff;border-radius:26px;padding:12px 8px 6px;box-shadow:0 10px 24px -14px rgba(60,50,90,.25)}
+.phone .chart svg{width:100%;height:auto;display:block}
+.phone .hist .hr2{display:flex;justify-content:space-between;background:#fff;border-radius:18px;padding:12px 16px;margin-bottom:8px;font-size:14px;font-weight:600}
+.phone .hist .hr2 span{font-family:var(--mono);font-size:13px;color:#7B7592}
+.phone .hrh{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.phone .hrh h4{font-size:24px}
+.phone .hrh a{color:#2F9A6C;font-weight:800;font-size:14px;cursor:pointer}
+.phone .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.phone .toast{position:absolute;left:18px;right:18px;bottom:88px;background:#3A3550;color:#fff;border-radius:16px;padding:12px 16px;font-size:13.5px;font-weight:600;text-align:center;z-index:5;animation:scin .25s}
+@media (max-width:900px){.demowrap{grid-template-columns:1fr;justify-items:center}.demoside{max-width:none;width:100%}.demoside{order:-1}}
+@media (max-width:420px){.phone{width:100%;height:680px;border-radius:38px}}
 </style>
 </head>
 <body>
@@ -387,7 +533,7 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 
 <main>
 <section class="work" id="kerja" aria-labelledby="kerja-h">
-  <h2 id="kerja-h">Kerja pilihan<span>Klik tile untuk membuka detailnya.</span></h2>
+  <h2 id="kerja-h">Kerja pilihan<span>Pilih tile untuk membuka detailnya.</span></h2>
 
   <button type="button" class="tile t-camp" data-open="ortuseight">
     <span class="plus" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 2v14M2 9h14"/></svg></span>
@@ -426,7 +572,7 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
     <div class="tx">
       <p class="lab">Program konten, pencipta dan talent utama</p>
       <h3>Jalaton</h3>
-      <p class="d">Tes sepatu dengan jalan kaki, 32 km atau lebih per episode. Satu rangkaian penuh bareng brand: jalan kaki dari Bandung sampai Surabaya.</p>
+      <p class="d">Uji sepatu dengan jalan kaki, 32 km atau lebih per episode. Satu rangkaian penuh bersama brand: jalan kaki dari Bandung sampai Surabaya.</p>
       <div class="nums"><div><b>26</b><span>episode</span></div><div><b>59.912</b><span>views</span></div><div><b>23</b><span>titik rute</span></div></div>
     </div>
     <svg class="jmini" viewBox="0 0 420 220" aria-hidden="true"><path d="M20,170 C70,170 70,90 130,100 C190,110 180,170 240,150 C300,130 290,50 350,60 C380,64 392,40 400,30" class="jmpath"/><circle cx="20" cy="170" r="8" class="jmdot"/><circle cx="130" cy="100" r="6" class="jmdot"/><circle cx="185" cy="128" r="7" class="jmdot"/><circle cx="240" cy="150" r="6" class="jmdot"/><circle cx="318" cy="88" r="7" class="jmdot"/><circle cx="350" cy="60" r="6" class="jmdot"/><circle cx="400" cy="30" r="10" class="jmdot"/></svg>
@@ -445,7 +591,7 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
   <button type="button" class="tile t-abs" data-open="absensi">
     <span class="plus" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 2v14M2 9h14"/></svg></span>
     <p class="lab">Sistem internal, inisiatif sendiri</p>
-    <h3>Absensi online lewat HP</h3>
+    <h3>Absensi daring melalui ponsel</h3>
     <div class="chips"><span>PIN</span><span>QR code</span><span>Lokasi</span><span>Selfie</span></div>
     <div class="nums"><div><b>10</b><span>karyawan</span></div><div><b>3 bln</b><span>berjalan</span></div><div><b>9</b><span>langkah</span></div></div>
   </button>
@@ -481,7 +627,7 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <h2 id="h-ortu">Ortuseight Hyperblast 3.0, campaign peluncuran produk</h2>
 <p class="lead">Ortuseight meluncurkan Hyperblast 3.0, penerus Hyperblast 2.0. Tugasnya membuktikan ke audiens bahwa upgrade-nya nyata. Strategi dan eksekusi dipegang penuh, dari riset sampai konten, tanpa brief dari brand.</p>
 <div class="acts">
-<div class="act"><b>1</b><h3>Keluhan</h3><p>Riset followers menemukan keluhan berulang: upper Hyperblast 2.0 gampang rusak. Konten dibuka dari masalah ini, bukan dari pitch produk.</p></div>
+<div class="act"><b>1</b><h3>Keluhan</h3><p>Riset followers menemukan keluhan berulang: upper Hyperblast 2.0 mudah rusak. Konten dibuka dari masalah ini, bukan dari pitch produk.</p></div>
 <div class="act"><b>2</b><h3>Pembuktian</h3><p>Sepatu rusak milik warga ditukar dengan Hyperblast 3.0, lalu dibedah untuk membuktikan apakah upgrade-nya benar ada.</p></div>
 <div class="act"><b>3</b><h3>Keputusan</h3><p>Ditutup dengan perbandingan Hyperblast 2.0 vs 3.0 untuk membantu audiens memutuskan.</p></div>
 </div>
@@ -496,13 +642,13 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <div><b>354</b><span>orders</span></div>
 <div><b>~2 bulan</b><span>durasi campaign</span></div>
 </div>
-<p class="note">Dari 11 konten di YouTube, Instagram, dan TikTok selama April sampai Mei 2026. Penjualan dilacak lewat affiliate link YouTube Shoe Police.</p>
+<p class="note">Dari 11 konten di YouTube, Instagram, dan TikTok selama April sampai Mei 2026. Penjualan dilacak melalui tautan affiliate YouTube Shoe Police.</p>
 </div></dialog>
 <dialog class="sheet" id="sheet-program" aria-labelledby="h-prog"><div class="sheet-in">
 <div class="sheet-bar"><span class="ttl">Program konten</span><button type="button" class="close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></div>
 <p class="tag">Dirancang dan dijalankan sebagai Creative Director</p>
 <h2 id="h-prog">The New Local Pride</h2>
-<p class="lead">Brand lokal kurang punya panggung untuk eksis di scene footwear Indonesia. Program ini memberi mereka ruang untuk membuktikan kualitas dan menunjukkan perubahan strategi agar lebih relevan dengan zaman, lewat serangkaian format konten di YouTube Shoe Police.</p>
+<p class="lead">Brand lokal kurang punya panggung untuk eksis di scene footwear Indonesia. Program ini memberi mereka ruang untuk membuktikan kualitas dan menunjukkan perubahan strategi agar lebih relevan dengan zaman, melalui serangkaian format konten di YouTube Shoe Police.</p>
 <div class="role"><h3>Peran</h3><p>Perencana utama: menyusun konsep visual dan tone of voice, mendraft isi konten, menjadi talent utama di beberapa episode, dan menjadi penghubung antara brand dengan Shoe Police.</p></div>
 <div class="pstats" style="margin-top:14px">
 <div><b>25</b><span>episode ditampilkan</span></div>
@@ -521,14 +667,14 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <li><span>Brand lokal</span><span class="to">tertarik tap in ke Detective Shoe</span></li>
 <li><span>Brand sepatu lokal</span><span class="to">tertarik tap in ke Komparasi / Versus</span></li>
 <li><span>Distributor brand global</span><span class="to">tertarik tap in ke Kisah Brand</span></li>
-<li><span>Retail olahraga besar, lewat distributor</span><span class="to">tertarik tap in ke Sidak Toko</span></li>
+<li><span>Retail olahraga besar, melalui distributor</span><span class="to">tertarik tap in ke Sidak Toko</span></li>
 </ul></div>
 </div></dialog>
 <dialog class="sheet" id="sheet-desain" aria-labelledby="h-des"><div class="sheet-in">
 <div class="sheet-bar"><span class="ttl">Art direction</span><button type="button" class="close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></div>
 <p class="tag">Creative Direction, Shoe Police</p>
 <h2 id="h-des">Hasil desain dari direction di Shoe Police</h2>
-<p class="lead">Tiga format visual untuk konten Shoe Police: poster rilisan, poster trivia, dan kartu ranking. Klik gambar untuk memperbesar.</p>
+<p class="lead">Tiga format visual untuk konten Shoe Police: poster rilisan, poster trivia, dan kartu ranking. Pilih gambar untuk memperbesar.</p>
 <div class="dgroup"><h3>Poster rilisan</h3><p>Foto produk atau tokoh sebagai visual utama, judul besar di bawah, dipakai untuk kabar rilisan dan peluncuran sepatu.</p><div class="dgrid"><button type="button" data-full="img/rilisan-timberland-supreme.jpg"><img src="img/s/rilisan-timberland-supreme.jpg" alt="Poster Timberland x Supreme, worth it gak ya?" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/rilisan-andre-anthony-walter.jpg"><img src="img/s/rilisan-andre-anthony-walter.jpg" alt="Poster Andre Anthony Walter akhirnya rilis" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/rilisan-adidas-adios-pro-5.jpg"><img src="img/s/rilisan-adidas-adios-pro-5.jpg" alt="Poster Adidas Adizero Adios Pro 5 rilis hari ini" loading="lazy" width="520" height="693"></button></div></div>
 <div class="dgroup"><h3>Poster trivia</h3><p>Satu fakta atau temuan, dirangkum dalam judul di dalam balon kuning di atas foto.</p><div class="dgrid"><button type="button" data-full="img/trivia-toko-ngaco.jpg"><img src="img/s/trivia-toko-ngaco.jpg" alt="Poster trivia: deretan toko ngaco jual brand Indonesia kita" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/trivia-event-lari.jpg"><img src="img/s/trivia-event-lari.jpg" alt="Poster trivia: deretan event lari di Indonesia dengan label World Athletics" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/trivia-on-mbappe.jpg"><img src="img/s/trivia-on-mbappe.jpg" alt="Poster trivia: On memasak sampai berani rebut Mbappe dari Nike" loading="lazy" width="520" height="693"></button></div></div>
 <div class="dgroup"><h3>Kartu ranking dan perbandingan</h3><p>Data disusun dalam kartu putih berurutan, memperlihatkan siapa memakai sepatu apa atau seri produk yang dibandingkan.</p><div class="dgrid"><button type="button" data-full="img/ranking-utmb-2026.jpg"><img src="img/s/ranking-utmb-2026.jpg" alt="Kartu ranking sepatu podium UTMB 2026 kategori putra" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/ranking-hyperboost.jpg"><img src="img/s/ranking-hyperboost.jpg" alt="Kartu perbandingan Hyperboost Edge, Run, dan Lite" loading="lazy" width="520" height="693"></button><button type="button" data-full="img/ranking-pocari-sweat-run.jpg"><img src="img/s/ranking-pocari-sweat-run.jpg" alt="Kartu ranking podium 10K putra Pocari Sweat Run Bandung 2026" loading="lazy" width="520" height="693"></button></div></div>
@@ -547,10 +693,10 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <li>Penghubung antara brand dan Shoe Police, dari ide sampai tayang.</li>
 <li>Beberapa kali tampil sebagai talent utama.</li>
 <li>Mengarahkan desain poster dan kartu konten Shoe Police dalam tiga format visual: rilisan, trivia, dan ranking.</li>
-<li>Mengembangkan program Detective Shoe (video investigasi YouTube) dari nol, sebagai developer, talent, dan periset.</li>
+<li>Mengembangkan program Detective Shoe (video investigasi YouTube) dari awal, sebagai developer, talent, dan periset.</li>
 </ul></div></div>
 <div class="cvsec"><h3>Proyek pilihan</h3><div class="cvproj">
-<div class="cvbox"><b>Ortuseight Hyperblast 3.0, campaign peluncuran produk</b><p>Dipegang penuh tanpa brief dari brand: riset keluhan upper Hyperblast 2.1 dari followers, tukar sepatu rusak warga dengan Hyperblast 3.0, konten bedah sepatu, lalu versus 2.1 vs 3.0. Hasilnya 1.123.164 views dan penjualan Rp92.256.000 (354 order) lewat link affiliate dalam sekitar 2 bulan.</p></div>
+<div class="cvbox"><b>Ortuseight Hyperblast 3.0, campaign peluncuran produk</b><p>Dipegang penuh tanpa brief dari brand: riset keluhan upper Hyperblast 2.0 dari followers, tukar sepatu rusak warga dengan Hyperblast 3.0, konten bedah sepatu, lalu versus 2.0 vs 3.0. Hasilnya 1.123.164 views dan penjualan Rp92.256.000 (354 order) melalui tautan affiliate dalam sekitar 2 bulan.</p></div>
 <div class="cvbox"><b>The New Local Pride</b><p>Program 10 format konten untuk memberi panggung brand lokal, 8 format sudah tayang. Dari episode yang tampil di portofolio: 25 episode dengan total 1,26 juta views. Format ini sudah menarik minat tap in dari beberapa brand.</p></div>
 <div class="cvbox"><b>Art direction Shoe Police</b><p>Sembilan poster dalam tiga format visual.</p></div>
 </div></div>
@@ -564,10 +710,10 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <dialog class="sheet" id="sheet-jalaton" aria-labelledby="h-jal"><div class="sheet-in">
 <div class="sheet-bar"><span class="ttl">Program konten</span><button type="button" class="close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></div>
 <p class="tag">Pencipta program dan talent utama, Shoe Police</p>
-<h2 id="h-jal">Jalaton, tes sepatu dengan jalan kaki</h2>
-<p class="lead">Program yang gue ciptakan: menguji sepatu lewat jalan kaki minimal 32 km dalam satu episode, fokus pada perjalanan dan pemakaian harian di medan jalanan, terutama kota Bandung. Awalnya program biasa, lalu ada brand yang tertarik dan tap in ke satu rangkaian penuh, jalan kaki dari Bandung sampai Surabaya.</p>
+<h2 id="h-jal">Jalaton, uji sepatu dengan jalan kaki</h2>
+<p class="lead">Program yang saya ciptakan: menguji sepatu dengan berjalan kaki minimal 32 km dalam satu episode, fokus pada perjalanan dan pemakaian harian di medan jalanan, terutama kota Bandung. Awalnya program biasa, lalu ada brand yang tertarik dan tap in ke satu rangkaian penuh, jalan kaki dari Bandung sampai Surabaya.</p>
 <div class="pstats"><div><b>26</b><span>episode</span></div><div><b>59.912</b><span>views</span></div><div><b>1.810</b><span>likes</span></div><div><b>+426</b><span>subs</span></div></div>
-<div class="fmt"><h4>Versi biasa</h4><p class="fdesc">Tes sepatu jalan kaki di luar kerja sama brand, dengan satu sepatu per episode.</p><ul class="eps"><li class="ep"><a href="https://youtube.com/watch?v=yz0OSOzvCy0" target="_blank" rel="noopener">Iseng jalan kaki 30km+ pake sepatu Weidenmann</a><span class="m">10.997 views</span><span class="m">212 likes</span><span class="m">30 comments</span><span class="m s">+24 subs</span></li><li class="ep"><a href="https://youtube.com/watch?v=MIdo8qfsoxg" target="_blank" rel="noopener">Unerd Fly Racer dipakai jalan kaki 33km</a><span class="m">9.920 views</span><span class="m">186 likes</span><span class="m">44 comments</span><span class="m s">+22 subs</span></li><li class="ep"><a href="https://youtube.com/watch?v=V_Ow7ExP_Jg" target="_blank" rel="noopener">Giliran Ortuseight Berlin dipakai Jalaton 32km</a><span class="m">8.899 views</span><span class="m">171 likes</span><span class="m">55 comments</span><span class="m s">+29 subs</span></li></ul></div>
+<div class="fmt"><h4>Versi biasa</h4><p class="fdesc">Uji sepatu jalan kaki di luar kerja sama brand, dengan satu sepatu per episode.</p><ul class="eps"><li class="ep"><a href="https://youtube.com/watch?v=yz0OSOzvCy0" target="_blank" rel="noopener">Iseng jalan kaki 30km+ pake sepatu Weidenmann</a><span class="m">10.997 views</span><span class="m">212 likes</span><span class="m">30 comments</span><span class="m s">+24 subs</span></li><li class="ep"><a href="https://youtube.com/watch?v=MIdo8qfsoxg" target="_blank" rel="noopener">Unerd Fly Racer dipakai jalan kaki 33km</a><span class="m">9.920 views</span><span class="m">186 likes</span><span class="m">44 comments</span><span class="m s">+22 subs</span></li><li class="ep"><a href="https://youtube.com/watch?v=V_Ow7ExP_Jg" target="_blank" rel="noopener">Giliran Ortuseight Berlin dipakai Jalaton 32km</a><span class="m">8.899 views</span><span class="m">171 likes</span><span class="m">55 comments</span><span class="m s">+29 subs</span></li></ul></div>
 <div class="fmt" style="margin-bottom:12px"><h4>Rangkaian bersama brand: Bandung ke Surabaya</h4><p class="fdesc">Ardiles tap in ke satu rangkaian 23 episode. Putar rute atau klik titik untuk melihat tiap episode.</p></div>
 <div class="jm">
 <svg viewBox="0 0 1000 880" role="group" aria-label="Peta rute Jalaton dari Bandung ke Surabaya" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="jfade" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#000"/><stop offset=".07" stop-color="#fff"/><stop offset=".93" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient><mask id="jlandmask"><rect width="1000" height="880" fill="url(#jfade)"/></mask><mask id="jmask" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="880"><path id="jmaskp" d="M98.2,312.1C106.5,309.1 131.5,297.8 148.1,293.8C164.8,289.7 181.1,294.3 198.0,287.6C214.9,281.0 225.1,252.5 249.5,254.0C274.0,255.5 322.3,288.7 344.5,296.8C366.8,305.0 368.7,301.9 383.2,302.9C397.7,304.0 403.6,298.9 431.5,302.9C459.4,307.0 527.8,325.9 550.6,327.4C573.4,328.9 566.2,293.8 568.3,312.1C570.5,330.5 561.6,406.5 563.5,437.6C565.4,468.7 571.0,486.5 579.6,498.8C588.2,511.0 603.7,516.1 615.0,511.0C626.3,505.9 630.3,476.8 647.2,468.2C664.1,459.5 703.0,448.8 716.5,459.0C729.9,469.2 715.6,519.2 727.7,529.4C739.8,539.6 769.8,524.3 788.9,520.2C808.0,516.1 839.1,493.7 842.0,504.9C845.0,516.1 815.5,561.0 806.6,587.5C797.8,614.0 784.6,649.7 788.9,664.0C793.2,678.3 812.8,677.8 832.4,673.2C852.0,668.6 886.6,659.4 906.4,636.5C926.3,613.5 949.1,562.5 951.5,535.5C953.9,508.5 925.2,494.2 920.9,474.3C916.6,454.4 924.9,425.8 925.8,416.2" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round"/></mask></defs><rect width="1000" height="880" class="jsea"/><g mask="url(#jlandmask)"><path d="M0.0,30.6C16.1,-17.9 67.1,91.8 96.6,107.1C126.1,122.4 157.0,117.3 177.1,122.4C197.2,127.5 205.3,117.3 217.3,137.7C229.4,158.1 234.8,221.8 249.5,244.8C264.3,267.7 289.8,266.2 305.9,275.4C322.0,284.6 325.5,295.8 346.2,299.9C366.8,304.0 407.1,301.4 429.9,299.9C452.7,298.3 463.4,288.1 483.0,290.7C502.6,293.2 530.8,315.2 547.4,315.2C564.0,315.2 575.6,308.5 582.8,290.7C590.1,272.8 583.4,228.5 590.9,208.1C598.4,187.7 608.3,162.2 627.9,168.3C647.5,174.4 677.5,221.8 708.4,244.8C739.3,267.7 788.9,298.4 813.0,306.0C837.2,313.6 838.5,277.9 853.3,290.7C868.1,303.4 888.2,364.6 901.6,382.5C915.0,400.4 927.1,379.9 933.8,397.8C940.5,415.6 939.2,466.6 941.8,489.6C944.5,512.5 940.5,522.8 949.9,535.5C959.3,548.2 982.1,555.9 998.2,566.1C1014.3,576.3 1038.5,558.4 1046.5,596.7C1054.5,634.9 1062.6,767.5 1046.5,795.6C1030.4,823.6 974.1,770.1 949.9,765.0C925.8,759.9 921.7,770.1 901.6,765.0C881.5,759.9 847.9,739.5 829.2,734.4C810.4,729.3 806.3,737.0 788.9,734.4C771.5,731.9 746.0,724.2 724.5,719.1C703.0,714.0 681.6,708.9 660.1,703.8C638.6,698.7 617.2,698.7 595.7,688.5C574.2,678.3 559.5,663.0 531.3,642.6C503.1,622.2 456.2,581.4 426.7,566.1C397.1,550.8 381.0,553.3 354.2,550.8C327.4,548.2 297.9,550.8 265.7,550.8C233.5,550.8 194.5,555.9 161.0,550.8C127.5,545.7 91.2,545.7 64.4,520.2C37.6,494.7 10.7,479.4 0.0,397.8C-10.7,316.2 -16.1,79.0 0.0,30.6Z" class="jland"/><text x="560" y="560" class="jbig" text-anchor="middle">JAWA</text></g><path d="M98.2,312.1C106.5,309.1 131.5,297.8 148.1,293.8C164.8,289.7 181.1,294.3 198.0,287.6C214.9,281.0 225.1,252.5 249.5,254.0C274.0,255.5 322.3,288.7 344.5,296.8C366.8,305.0 368.7,301.9 383.2,302.9C397.7,304.0 403.6,298.9 431.5,302.9C459.4,307.0 527.8,325.9 550.6,327.4C573.4,328.9 566.2,293.8 568.3,312.1C570.5,330.5 561.6,406.5 563.5,437.6C565.4,468.7 571.0,486.5 579.6,498.8C588.2,511.0 603.7,516.1 615.0,511.0C626.3,505.9 630.3,476.8 647.2,468.2C664.1,459.5 703.0,448.8 716.5,459.0C729.9,469.2 715.6,519.2 727.7,529.4C739.8,539.6 769.8,524.3 788.9,520.2C808.0,516.1 839.1,493.7 842.0,504.9C845.0,516.1 815.5,561.0 806.6,587.5C797.8,614.0 784.6,649.7 788.9,664.0C793.2,678.3 812.8,677.8 832.4,673.2C852.0,668.6 886.6,659.4 906.4,636.5C926.3,613.5 949.1,562.5 951.5,535.5C953.9,508.5 925.2,494.2 920.9,474.3C916.6,454.4 924.9,425.8 925.8,416.2" id="jroute" class="jroute"/><path d="M98.2,312.1C106.5,309.1 131.5,297.8 148.1,293.8C164.8,289.7 181.1,294.3 198.0,287.6C214.9,281.0 225.1,252.5 249.5,254.0C274.0,255.5 322.3,288.7 344.5,296.8C366.8,305.0 368.7,301.9 383.2,302.9C397.7,304.0 403.6,298.9 431.5,302.9C459.4,307.0 527.8,325.9 550.6,327.4C573.4,328.9 566.2,293.8 568.3,312.1C570.5,330.5 561.6,406.5 563.5,437.6C565.4,468.7 571.0,486.5 579.6,498.8C588.2,511.0 603.7,516.1 615.0,511.0C626.3,505.9 630.3,476.8 647.2,468.2C664.1,459.5 703.0,448.8 716.5,459.0C729.9,469.2 715.6,519.2 727.7,529.4C739.8,539.6 769.8,524.3 788.9,520.2C808.0,516.1 839.1,493.7 842.0,504.9C845.0,516.1 815.5,561.0 806.6,587.5C797.8,614.0 784.6,649.7 788.9,664.0C793.2,678.3 812.8,677.8 832.4,673.2C852.0,668.6 886.6,659.4 906.4,636.5C926.3,613.5 949.1,562.5 951.5,535.5C953.9,508.5 925.2,494.2 920.9,474.3C916.6,454.4 924.9,425.8 925.8,416.2" class="jwalked" mask="url(#jmask)"/><text x="72.2" y="356.1" class="jlab" text-anchor="start">Bandung</text><text x="249.5" y="230.0" class="jlab" text-anchor="middle">Cirebon</text><text x="550.6" y="301.4" class="jlab" text-anchor="middle">Semarang</text><text x="621.0" y="549.0" class="jlab" text-anchor="middle">Solo</text><text x="906.4" y="674.5" class="jlab" text-anchor="middle">Malang</text><text x="925.8" y="390.2" class="jlab" text-anchor="middle">Surabaya</text><g class="stop" data-i="0" tabindex="0" role="button" aria-label="Titik awal: Bandung"><circle cx="98.2" cy="312.1" r="24" class="hit"/><rect x="89.2" y="303.1" width="18" height="18" rx="4" class="dot start"/></g><g class="stop" data-i="1" tabindex="0" role="button" aria-label="Eps. 1 Bandung - Sumedang"><circle cx="148.1" cy="293.8" r="22" class="hit"/><circle cx="148.1" cy="293.8" r="11.4" class="dot"/></g><g class="stop" data-i="2" tabindex="0" role="button" aria-label="Eps. 2 Sumedang - Majalengka"><circle cx="198.0" cy="287.6" r="22" class="hit"/><circle cx="198.0" cy="287.6" r="10.6" class="dot"/></g><g class="stop" data-i="3" tabindex="0" role="button" aria-label="Eps. 3 Majalengka - Cirebon"><circle cx="249.5" cy="254.0" r="22" class="hit"/><circle cx="249.5" cy="254.0" r="10.3" class="dot"/></g><g class="stop" data-i="4" tabindex="0" role="button" aria-label="Eps. 4 Cirebon - Tegal"><circle cx="344.5" cy="296.8" r="22" class="hit"/><circle cx="344.5" cy="296.8" r="10.9" class="dot"/></g><g class="stop" data-i="5" tabindex="0" role="button" aria-label="Eps. 5 Tegal - Pemalang"><circle cx="383.2" cy="302.9" r="22" class="hit"/><circle cx="383.2" cy="302.9" r="10.1" class="dot"/></g><g class="stop" data-i="6" tabindex="0" role="button" aria-label="Eps. 6 Pemalang - Pekalongan"><circle cx="431.5" cy="302.9" r="22" class="hit"/><circle cx="431.5" cy="302.9" r="10.4" class="dot"/></g><g class="stop" data-i="7" tabindex="0" role="button" aria-label="Eps. 7 Pekalongan - Semarang"><circle cx="550.6" cy="327.4" r="22" class="hit"/><circle cx="550.6" cy="327.4" r="10.0" class="dot"/></g><g class="stop" data-i="8" tabindex="0" role="button" aria-label="Eps. 8 Semarang day"><circle cx="568.3" cy="312.1" r="22" class="hit"/><circle cx="568.3" cy="312.1" r="10.6" class="dot"/></g><g class="stop" data-i="9" tabindex="0" role="button" aria-label="Eps. 9 Semarang - Salatiga"><circle cx="563.5" cy="437.6" r="22" class="hit"/><circle cx="563.5" cy="437.6" r="9.8" class="dot"/></g><g class="stop" data-i="10" tabindex="0" role="button" aria-label="Eps. 10 Salatiga - Boyolali"><circle cx="579.6" cy="498.8" r="22" class="hit"/><circle cx="579.6" cy="498.8" r="9.9" class="dot"/></g><g class="stop" data-i="11" tabindex="0" role="button" aria-label="Eps. 11 Boyolali - Solo"><circle cx="615.0" cy="511.0" r="22" class="hit"/><circle cx="615.0" cy="511.0" r="9.1" class="dot"/></g><g class="stop" data-i="12" tabindex="0" role="button" aria-label="Eps. 12 Solo - Sragen"><circle cx="647.2" cy="468.2" r="22" class="hit"/><circle cx="647.2" cy="468.2" r="9.6" class="dot"/></g><g class="stop" data-i="13" tabindex="0" role="button" aria-label="Eps. 13 Sragen - Ngawi"><circle cx="716.5" cy="459.0" r="22" class="hit"/><circle cx="716.5" cy="459.0" r="8.8" class="dot"/></g><g class="stop" data-i="14" tabindex="0" role="button" aria-label="Eps. 14 Ngawi - Madiun"><circle cx="727.7" cy="529.4" r="22" class="hit"/><circle cx="727.7" cy="529.4" r="8.5" class="dot"/></g><g class="stop" data-i="15" tabindex="0" role="button" aria-label="Eps. 15 Madiun - Nganjuk"><circle cx="788.9" cy="520.2" r="22" class="hit"/><circle cx="788.9" cy="520.2" r="8.6" class="dot"/></g><g class="stop" data-i="16" tabindex="0" role="button" aria-label="Eps. 16 Nganjuk - Jombang"><circle cx="842.0" cy="504.9" r="22" class="hit"/><circle cx="842.0" cy="504.9" r="8.6" class="dot"/></g><g class="stop" data-i="17" tabindex="0" role="button" aria-label="Eps. 17 Jombang - Kediri"><circle cx="806.6" cy="587.5" r="22" class="hit"/><circle cx="806.6" cy="587.5" r="9.0" class="dot"/></g><g class="stop" data-i="18" tabindex="0" role="button" aria-label="Eps. 18 Kediri - Tulungagung"><circle cx="788.9" cy="664.0" r="22" class="hit"/><circle cx="788.9" cy="664.0" r="8.4" class="dot"/></g><g class="stop" data-i="19" tabindex="0" role="button" aria-label="Eps. 19 Tulungagung - Blitar"><circle cx="832.4" cy="673.2" r="22" class="hit"/><circle cx="832.4" cy="673.2" r="8.4" class="dot"/></g><g class="stop" data-i="20" tabindex="0" role="button" aria-label="Eps. 20 Blitar - Malang"><circle cx="906.4" cy="636.5" r="22" class="hit"/><circle cx="906.4" cy="636.5" r="8.8" class="dot"/></g><g class="stop" data-i="21" tabindex="0" role="button" aria-label="Eps. 21 Malang - Pasuruan"><circle cx="951.5" cy="535.5" r="22" class="hit"/><circle cx="951.5" cy="535.5" r="8.9" class="dot"/></g><g class="stop" data-i="22" tabindex="0" role="button" aria-label="Eps. 22 Pasuruan - Sidoarjo"><circle cx="920.9" cy="474.3" r="22" class="hit"/><circle cx="920.9" cy="474.3" r="9.4" class="dot"/></g><g class="stop" data-i="23" tabindex="0" role="button" aria-label="Eps. 23 Sidoarjo - Surabaya Final"><circle cx="925.8" cy="416.2" r="22" class="hit"/><circle cx="925.8" cy="416.2" r="12.0" class="dot"/></g><g id="jwalker" class="walker"><circle r="20" class="wpulse"/><circle r="11" class="wdot"/></g></svg>
@@ -578,7 +724,7 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <dialog class="sheet" id="sheet-kluk" aria-labelledby="h-kluk"><div class="sheet-in">
 <div class="sheet-bar"><span class="ttl">Campaign affiliate</span><button type="button" class="close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></div>
 <p class="tag">YouTube Shorts, Shoe Police</p>
-<h2 id="h-kluk">Kluk, campaign affiliate lewat YouTube Shorts</h2>
+<h2 id="h-kluk">Kluk, campaign affiliate melalui YouTube Shorts</h2>
 <p class="lead">Campaign affiliate khusus format Shorts untuk brand Kluk. Serangkaian 12 Shorts mengarahkan penonton ke link affiliate, dan hasilnya dilacak dari views, order, dan sales.</p>
 <div class="pstats"><div><b>12</b><span>Shorts</span></div><div><b>204.366</b><span>views</span></div><div><b>553</b><span>order</span></div><div><b>Rp97,0 jt</b><span>total sales</span></div></div>
 <div class="fmt" style="margin-bottom:12px"><h4>Dua Shorts dengan sales terbesar</h4><p class="fdesc">Dua dari 12 Shorts menyumbang sekitar 37% dari total sales.</p></div>
@@ -587,19 +733,22 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <dialog class="sheet" id="sheet-absensi" aria-labelledby="h-abs"><div class="sheet-in">
 <div class="sheet-bar"><span class="ttl">Sistem internal</span><button type="button" class="close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></div>
 <p class="tag">Inisiatif sendiri, Shoe Police</p>
-<h2 id="h-abs">Absensi online lewat HP untuk karyawan Shoe Police</h2>
-<p class="lead">Dulu karyawan harus fingerprint di kantor lain yang lokasinya cukup jauh dari kantor Shoe Police. Gue berinisiatif membangun sistem absensi online yang bisa dipakai lewat HP, supaya absen jadi lebih mudah untuk semua karyawan.</p>
+<h2 id="h-abs">Absensi daring melalui ponsel untuk karyawan Shoe Police</h2>
+<p class="lead">Sebelumnya, karyawan harus fingerprint di kantor lain yang lokasinya cukup jauh dari kantor Shoe Police. Saya berinisiatif membangun sistem absensi daring yang bisa dipakai melalui ponsel, supaya proses absen lebih mudah untuk semua karyawan.</p>
 <div class="pstats"><div><b>10</b><span>karyawan pengguna</span></div><div><b>3 bulan</b><span>sudah berjalan</span></div><div><b>9</b><span>langkah absen</span></div><div><b>4</b><span>lapis verifikasi</span></div></div>
-<div class="ba"><div><span class="r">Dulu</span><p>Fingerprint di kantor yang berbeda, lokasinya cukup jauh dari kantor Shoe Police.</p></div><div><span class="r">Sekarang</span><p>Absen online lewat HP, dengan QR code di depan kantor Shoe Police.</p></div></div>
-<div class="fmt" style="margin-bottom:12px"><h4>Cara absen, 9 langkah</h4><p class="fdesc">Klik langkahnya atau putar alurnya. PIN, QR code, lokasi, dan selfie adalah empat lapis verifikasi.</p></div>
+<div class="ba"><div><span class="r">Sebelumnya</span><p>Fingerprint di kantor yang berbeda, lokasinya cukup jauh dari kantor Shoe Police.</p></div><div><span class="r">Sekarang</span><p>Presensi daring melalui ponsel, dengan QR code di depan kantor Shoe Police.</p></div></div>
+<div class="fmt" style="margin-bottom:12px"><h4>Cara absen, 9 langkah</h4><p class="fdesc">Pilih langkahnya atau putar alurnya. PIN, QR code, lokasi, dan selfie adalah empat lapis verifikasi.</p></div>
 <div class="stepper">
 <ol class="stl" style="list-style:none;margin:0;padding:0"><li><button type="button" class="st" data-i="0"><b>1</b><span>Buka aplikasi</span></button></li><li><button type="button" class="st v" data-i="1"><b>2</b><span>Masukkan PIN pribadi</span></button></li><li><button type="button" class="st" data-i="2"><b>3</b><span>Masuk ke card Absensi</span></button></li><li><button type="button" class="st" data-i="3"><b>4</b><span>Pilih jenis Absen masuk</span></button></li><li><button type="button" class="st v" data-i="4"><b>5</b><span>Scan QR code di kantor</span></button></li><li><button type="button" class="st v" data-i="5"><b>6</b><span>Lokasi dicek otomatis</span></button></li><li><button type="button" class="st v" data-i="6"><b>7</b><span>Foto selfie</span></button></li><li><button type="button" class="st" data-i="7"><b>8</b><span>Klik Input absen</span></button></li><li><button type="button" class="st" data-i="8"><b>9</b><span>Selesai</span></button></li></ol>
 <div class="stp" aria-live="polite"><span class="n">1</span><h4></h4><p></p><div class="bar"><i></i></div></div>
 </div>
 <div class="stctl"><button type="button" class="absplay">Putar alur</button></div>
+<div class="fmt" style="margin-bottom:12px"><h4>Coba sendiri</h4><p class="fdesc">Demo dengan data contoh. QR, lokasi, dan kamera hanya disimulasikan, tidak ada data karyawan sungguhan.</p></div>
+<div class="demowrap"><div class="phone" role="application" aria-label="Demo aplikasi absensi"><div class="app"></div><nav class="bn"><button type="button" data-arg="home">🏠<span>Home</span></button><button type="button" data-arg="lb">🏆<span>Papan</span></button><button type="button" data-arg="prof">👤<span>Profil</span></button></nav></div>
+<div class="demoside"><span class="tagd">Demo, data contoh</span><ol><li>Masukkan PIN <b>1234</b>.</li><li>Tap <b>Absen Sekarang</b>, lalu pilih <b>Absen Masuk</b>.</li><li>Pindai QR demo, tunggu lokasi, lalu ambil foto.</li><li>Tap <b>Input Absen</b>. Lalu cek peringkat di tab trofi dan rekap di tab profil.</li></ol><button type="button" class="demoreset">Ulangi demo</button></div></div>
 <div class="fmt" style="margin-bottom:12px"><h4>Fitur</h4></div>
-<div class="afs"><div class="af"><h4>Absensi karyawan</h4><p>Absen masuk lewat HP dengan PIN, QR, lokasi, dan selfie.</p><span class="chipst">Aktif</span></div><div class="af"><h4>Leaderboard</h4><p>Peringkat kehadiran karyawan.</p><span class="chipst">Aktif</span></div><div class="af"><h4>Dashboard HR</h4><p>HR mengecek semua absensi karyawan dalam satu tempat.</p><span class="chipst">Aktif</span></div><div class="af soon"><h4>Slip gaji</h4><p>Slip gaji karyawan yang dibuat otomatis.</p><span class="chipst">Dalam pengembangan</span></div></div>
-<p class="lead" style="margin-top:20px">Dibangun sebagai aplikasi web (PWA) yang bisa dipasang di HP.</p>
+<div class="afs"><div class="af"><h4>Absensi karyawan</h4><p>Absen masuk melalui ponsel dengan PIN, QR, lokasi, dan selfie.</p><span class="chipst">Aktif</span></div><div class="af"><h4>Leaderboard</h4><p>Peringkat kehadiran karyawan.</p><span class="chipst">Aktif</span></div><div class="af"><h4>Dashboard HR</h4><p>HR mengecek semua absensi karyawan dalam satu tempat.</p><span class="chipst">Aktif</span></div><div class="af soon"><h4>Slip gaji</h4><p>Slip gaji karyawan yang dibuat otomatis.</p><span class="chipst">Dalam pengembangan</span></div></div>
+<p class="lead" style="margin-top:20px">Dibangun sebagai aplikasi web (PWA) yang bisa dipasang di ponsel.</p>
 </div></dialog>
 
 <dialog class="lb" id="lb" aria-label="Pratinjau gambar"><img id="lbimg" src="" alt=""><button type="button" class="close" id="lbclose"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></dialog>
@@ -902,6 +1051,7 @@ function start(){
 btns.forEach(function(b){ b.addEventListener("click", function(){ stop(); show(+b.dataset.i); }); });
 play.addEventListener("click", function(){ if(timer){ stop(); } else { start(); } });
 show(0);
+window.__absStep = function(i){ stop(); show(i); };
 var was = false;
 function onOpen(){
   if(dlg.open && !was){ was = true; stop(); show(0); if(!RM){ setTimeout(function(){ if(dlg.open && cur === 0 && !timer) start(); }, 1200); } }
@@ -909,6 +1059,229 @@ function onOpen(){
 }
 new MutationObserver(onOpen).observe(dlg, {attributes:true, attributeFilter:["open"]});
 onOpen();
+})();
+(function(){
+var dlg = document.getElementById("sheet-absensi"); if(!dlg) return;
+var phone = dlg.querySelector(".phone"); if(!phone) return;
+var app = phone.querySelector(".app"), nav = phone.querySelector(".bn");
+var RM = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+var TYPES = {
+  masuk:{l:"Absen Masuk", e:"🟢", k:true}, pulang:{l:"Absen Pulang", e:"🔴", k:true}, ijinK:{l:"Ijin dari Kantor", e:"📝", k:true},
+  dinas:{l:"Dinas Lapangan dari Rumah", e:"🚗", k:false}, ijinR:{l:"Ijin dari Rumah", e:"📝", k:false}, pulangL:{l:"Pulang dari Luar", e:"🔚", k:false}, sakit:{l:"Sakit", e:"🤒", k:false}
+};
+var MON = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+var DOW = ["MIN","SEN","SEL","RAB","KAM","JUM","SAB"];
+var PASTEL = ["#F3ECFA","#E4F6EE","#FCEBDD","#FCE6EE","#E6F1FB","#FBF3D4","#EDEAFB"];
+var QUOTES = ["Inflasi boleh naik, tapi semangat lo jangan ikut-ikutan. Tetap gas hari ini!","Absen dulu, baru rebahan. Eh, kerja dulu maksudnya.","Datang tepat waktu itu bentuk cinta paling sederhana."];
+var NOW = new Date(), Y = NOW.getFullYear(), M = NOW.getMonth(), TD = NOW.getDate(), DIM = new Date(Y, M + 1, 0).getDate();
+var BOTS = [["Aria",536],["Bima",522],["Citra",515],["Dika",514],["Eka",510],["Fajar",491],["Gita",422],["Hadi",364]];
+var HRS = [["Aria",5,0,0,0],["Bima",5,0,0,0],["Citra",5,0,0,1],["Dika",5,0,0,3],["Eka",4,1,0,0],["Fajar",0,0,0,0]];
+var st, shotTaken, qrDone;
+function pad(n){ return (n < 10 ? "0" : "") + n; }
+function hm(mins){ return pad(Math.floor(mins/60)) + ":" + pad(mins % 60); }
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+function reset(){
+  st = {screen:"login", tab:"home", type:null, pts:405, masuk:null, pulang:null, extra:{sakit:0, ijin:0}, hist:[], busy:false};
+  shotTaken = false; qrDone = false;
+}
+function isSun(d){ return new Date(Y, M, d).getDay() === 0; }
+function seedIn(d){ return (d % 5 === 0) ? 8*60 + 4 + (d % 7) : 7*60 + 10 + ((d * 37) % 50); }
+function seedOut(d){ return 17*60 + ((d * 13) % 25); }
+function presentDays(){
+  var a = [];
+  for(var d = 1; d < TD; d++){ if(!isSun(d) && d !== 3) a.push(d); }
+  return a;
+}
+function stats(){
+  var p = presentDays(), hadir = p.length, telat = p.filter(function(d){ return d % 5 === 0; }).length;
+  var sakit = (TD > 3 && !isSun(3) ? 1 : 0) + st.extra.sakit, ijin = st.extra.ijin;
+  if(st.masuk !== null){ hadir++; if(st.masuk > 8*60) telat++; }
+  return {hadir:hadir, sakit:sakit, ijin:ijin, telat:telat};
+}
+function board(){
+  var rows = BOTS.map(function(b){ return {n:b[0], p:b[1], me:false}; });
+  rows.push({n:"KAMU", p:st.pts, me:true});
+  rows.sort(function(a, b){ return b.p - a.p; });
+  return rows;
+}
+function rank(){ var r = board(); for(var i = 0; i < r.length; i++){ if(r[i].me) return i + 1; } return r.length; }
+function setStep(i){ if(window.__absStep) window.__absStep(i); }
+function toast(t){
+  var old = phone.querySelector(".toast"); if(old) old.remove();
+  var d = document.createElement("div"); d.className = "toast"; d.textContent = t; phone.appendChild(d);
+  setTimeout(function(){ if(d.parentNode) d.remove(); }, 2200);
+}
+/* ---------- views ---------- */
+var V = {};
+V.login = function(){
+  return '<div class="lg"><div class="lg-ic">📋</div><h3>Absensi</h3><div class="card lgc"><p>Selamat datang, TAMU! 👋</p><input class="in" id="pin" type="password" inputmode="numeric" maxlength="6" placeholder="Masukkan PIN" autocomplete="off"><button class="btn" data-act="login">Masuk</button><p class="hintp">PIN demo: 1234</p></div></div>';
+};
+V.home = function(){
+  var h = NOW.getHours(), g = h < 11 ? ["Pagi","☀️"] : h < 15 ? ["Siang","🌤️"] : h < 18 ? ["Sore","🌇"] : ["Malam","🌙"];
+  var days = "";
+  for(var i = 0; i < 8; i++){ var dt = new Date(Y, M, TD + i); days += '<div class="dc' + (i === 0 ? ' t' : '') + '"' + (i ? ' style="background:' + PASTEL[i % 7] + '"' : '') + '><small>' + DOW[dt.getDay()] + '</small><b>' + dt.getDate() + '</b></div>'; }
+  var left = DIM - TD;
+  var cal = '<div class="cg">' + DOW.map(function(d){ return '<div class="w">' + d + '</div>'; }).join("");
+  var first = new Date(Y, M, 1).getDay(), pd = presentDays();
+  for(var k = 0; k < first; k++) cal += '<div></div>';
+  for(var d = 1; d <= DIM; d++){
+    var cls = d === TD ? "d t" : d < TD ? "d p" : "d", dot = pd.indexOf(d) > -1 || (d === TD && st.masuk !== null);
+    cal += '<div class="' + cls + (dot ? " k" : "") + '">' + (d === TD ? '<span>' + d + '</span>' : d) + '</div>';
+  }
+  cal += '</div>';
+  return '<div class="gr"><div><small>Selamat ' + g[0] + ' ' + g[1] + '</small><h2>Hei, TAMU! 📈</h2></div><div class="gj"><b>🔥 ' + left + '</b>hari lagi gajian</div></div>' +
+    '<p class="qt">' + QUOTES[0] + '</p><div class="sec" style="margin-top:12px">Tanggal</div><div class="ds">' + days + '</div>' +
+    '<button class="big bl" data-act="absen"><h3>Absen Sekarang</h3><p>Tap buat check-in, check-out, atau ijin</p><span class="em">📋</span></button>' +
+    '<button class="big pu" data-act="nav" data-arg="lb"><div><h3>Leaderboard</h3><p>Cek posisi kehadiran kamu bulan ini</p></div><div class="rk"><b>#' + rank() + '</b><span>PERINGKAT</span></div></button>' +
+    '<div class="tm"><div class="tmc"><i>🚶</i><div><small>Masuk</small><b>' + (st.masuk === null ? "--:--" : hm(st.masuk)) + '</b></div></div><div class="tmc"><i>🏃</i><div><small>Pulang</small><b>' + (st.pulang === null ? "--:--" : hm(st.pulang)) + '</b></div></div></div>' +
+    '<div class="sec">Kalender</div><div class="card cal"><div class="hd"><h4>' + MON[M] + ' ' + Y + '</h4><span>KAMU</span></div>' + cal + '</div>' +
+    '<div class="sec">Coming soon</div><div class="cs"><em>🚀</em>Fitur baru segera hadir</div>';
+};
+V.lb = function(){
+  var r = board(), pod = "";
+  var order = [[1,"s"],[0,"f"],[2,"t"]];
+  order.forEach(function(o){ var x = r[o[0]]; pod += '<div class="pc ' + o[1] + '"><div class="av">' + x.n[0] + '</div><div class="nm">' + esc(x.n) + '</div><div class="pt">' + x.p + ' poin</div><div class="bs">' + (o[0] + 1) + '</div></div>'; });
+  var list = "";
+  for(var i = 3; i < r.length; i++){ list += '<div class="lr' + (r[i].me ? " me" : "") + '"><span class="rn">' + pad(i + 1) + '</span><div class="av">' + r[i].n[0] + '</div><div><b>' + esc(r[i].n) + '</b><span>' + r[i].p + ' poin</span></div></div>'; }
+  return '<div class="top"><h3>🏆 Leaderboard Kehadiran</h3></div><div class="pod">' + pod + '</div><div class="card lbx">' + list + '</div>';
+};
+V.prof = function(){
+  var s = stats(), n = DIM, bars = "", grid = "";
+  [6,7,8,9,10].forEach(function(hh){ var y = 170 - (hh - 6) * 37.5; grid += '<line x1="40" x2="292" y1="' + y + '" y2="' + y + '" stroke="#EEEAF3"/><text x="34" y="' + (y + 4) + '" text-anchor="end" font-size="10" fill="#9A94AE">' + pad(hh) + ':00</text>'; });
+  var all = presentDays().map(function(d){ return [d, seedIn(d)]; });
+  if(st.masuk !== null) all.push([TD, st.masuk]);
+  all.forEach(function(a){ var m = Math.max(360, Math.min(600, a[1])), hgt = (m - 360) / 240 * 150, x = 40 + (a[0] - .5) / n * 252; bars += '<rect x="' + (x - 2.5).toFixed(1) + '" y="' + (170 - hgt).toFixed(1) + '" width="5" height="' + hgt.toFixed(1) + '" rx="2.5" fill="#52AE87"/>'; });
+  var ticks = ""; for(var d = 1; d <= n; d += 4){ ticks += '<text x="' + (40 + (d - .5) / n * 252).toFixed(1) + '" y="188" text-anchor="middle" font-size="10" fill="#9A94AE">' + d + '</text>'; }
+  var chart = '<svg viewBox="0 0 300 196">' + grid + '<line x1="40" x2="292" y1="95" y2="95" stroke="#B9B2CC" stroke-width="1.5" stroke-dasharray="5 4"/>' + bars + ticks + '</svg>';
+  var hist = "", ps = presentDays().slice(-3).reverse(), items = [];
+  if(st.hist.length){ st.hist.slice().reverse().forEach(function(h){ items.push(["Hari ini · " + h.l, h.t]); }); }
+  ps.forEach(function(d){ items.push([d + " " + MON[M].slice(0, 3) + " · Masuk / Pulang", hm(seedIn(d)) + " / " + hm(seedOut(d))]); });
+  items.slice(0, 6).forEach(function(i){ hist += '<div class="hr2">' + esc(i[0]) + '<span>' + esc(i[1]) + '</span></div>'; });
+  return '<div class="pf"><div class="av">T</div><div><h2>TAMU</h2><em>KARYAWAN AKTIF</em></div></div>' +
+    '<button class="mb" data-act="hr">🔐 Mode HR</button><div class="mb dis">💰 Slip Gaji Saya <small>Segera Hadir</small></div>' +
+    '<div class="sec">Rekap bulan ini</div><div class="rk4"><div class="h"><b>' + s.hadir + '</b><span>HADIR</span></div><div class="s"><b>' + s.sakit + '</b><span>SAKIT</span></div><div class="i"><b>' + s.ijin + '</b><span>IJIN</span></div><div class="l"><b>' + s.telat + '</b><span>TERLAMBAT</span></div></div>' +
+    '<div class="sec">Tren kehadiran</div><div class="chart">' + chart + '</div><div class="sec">Riwayat absensi</div><div class="hist">' + hist + '</div>';
+};
+V.hr = function(){
+  var s = stats(), rows = HRS.map(function(r){ return r; });
+  rows.push(["KAMU", s.hadir, s.sakit, s.ijin, s.telat]);
+  var list = rows.map(function(r){
+    var none = !r[1] && !r[2] && !r[3];
+    return '<div class="lr' + (r[0] === "KAMU" ? " me" : "") + '"><div class="av">' + r[0][0] + '</div><div><b>' + esc(r[0]) + '</b>' + (none ? '<span style="color:#B53A2D">Tidak ada absen</span>' : '<span>Hadir ' + r[1] + ' • Sakit ' + r[2] + ' • Ijin ' + r[3] + (r[4] ? ' • <b style="display:inline;color:#B53A2D">Telat ' + r[4] + '</b>' : '') + '</span>') + '</div></div>';
+  }).join("");
+  return '<div class="top"><button class="bk" data-act="nav" data-arg="prof">←</button><h3>🔐 Mode HR</h3></div>' +
+    '<div class="card"><div class="hrh"><h4>🗓️ Rekap Bulanan</h4><a data-act="noop">🔑 Kelola PIN</a><a data-act="noop">💰 Payroll</a><a data-act="noop">🔄 Hitung Ulang Skor</a></div>' +
+    '<div class="row2"><select class="in"><option>' + MON[M] + '</option></select><input class="in" value="' + Y + '" readonly></div><button class="btn" data-act="noop">Tampilkan</button><div style="margin-top:12px">' + list + '</div></div>' +
+    '<p class="qt" style="text-align:center">Data karyawan di demo ini hanya contoh.</p>';
+};
+V.type = function(){
+  function o(k){ return '<button class="opt" data-act="type" data-arg="' + k + '">' + TYPES[k].e + ' ' + TYPES[k].l + '</button>'; }
+  return '<div class="top"><button class="bk" data-act="nav" data-arg="home">←</button><h3>📋 Absensi</h3></div><div class="card"><p class="msg">Pilih jenis absensi</p><div class="lbl" style="margin-top:0">DI KANTOR</div>' + o("masuk") + o("pulang") + o("ijinK") + '<div class="lbl">DI LUAR KANTOR</div>' + o("dinas") + o("ijinR") + o("pulangL") + o("sakit") + '</div>';
+};
+function chip(){ var t = TYPES[st.type]; return '<div class="chipt">' + t.e + ' ' + t.l + ' <a data-act="absen">Ganti</a></div>'; }
+function qrSvg(){
+  var s = "", c = 21, seed = 7;
+  for(var y = 0; y < c; y++) for(var x = 0; x < c; x++){
+    var f = (x < 7 && y < 7) || (x > 13 && y < 7) || (x < 7 && y > 13);
+    var on;
+    if(f){ var lx = x % 14 > 6 ? x - 14 : x, ly = y > 13 ? y - 14 : y; on = (lx === 0 || lx === 6 || ly === 0 || ly === 6) || (lx >= 2 && lx <= 4 && ly >= 2 && ly <= 4); }
+    else { seed = (seed * 9301 + 49297) % 233280; on = seed / 233280 > .52; }
+    if(on) s += '<rect x="' + x + '" y="' + y + '" width="1" height="1"/>';
+  }
+  return '<svg viewBox="0 0 21 21" class="qr" fill="#1c1a24" shape-rendering="crispEdges">' + s + '</svg>';
+}
+V.qr = function(){
+  return '<div class="top"><button class="bk" data-act="back">←</button><h3>📋 Absensi</h3></div><div class="card">' + chip() + '<p class="msg">Scan QR code di lokasi kantor</p><div class="vf' + (qrDone ? " ok" : "") + '" id="vf">' + qrSvg() + '<i class="co a"></i><i class="co b"></i><i class="co c"></i><i class="co d"></i><div class="ln"></div><div class="okb">✅</div></div><p class="msg" style="margin:12px 0 10px;font-size:13px">Demo: kamera tidak dipakai. Tekan tombol untuk memindai QR contoh.</p><button class="btn" data-act="scan">📷 Pindai QR demo</button></div>';
+};
+V.gps = function(){
+  return '<div class="top"><button class="bk" data-act="back">←</button><h3>📋 Absensi</h3></div><div class="card">' + chip() + '<p class="msg" id="gmsg">Mengambil lokasi GPS…</p><div class="gpsb" id="gbox" style="visibility:hidden">📍 -6.91750, 107.60610<small>Lokasi contoh, bukan lokasi kamu</small></div></div>';
+};
+function silhouette(){ return '<svg viewBox="0 0 200 200"><circle cx="100" cy="78" r="38" fill="#e9eef2"/><path d="M20 200c0-46 36-74 80-74s80 28 80 74z" fill="#e9eef2"/></svg>'; }
+V.selfie = function(){
+  var t = TYPES[st.type];
+  return '<div class="top"><button class="bk" data-act="back">←</button><h3>📋 Absensi</h3></div><div class="card">' + chip() + '<p class="msg">Ambil foto selfie, ' + t.l + '</p><div class="cam" id="cam"><div class="nt">Demo: kamera dinonaktifkan</div>' + silhouette() + '<div class="fl"></div>' + (shotTaken ? '<div class="okc">Foto contoh tersimpan ✓</div>' : '') + '</div><div style="margin-top:14px">' +
+    (shotTaken ? '<button class="btn" data-act="submit">Input Absen</button><button class="btn ol" data-act="retake">Ulangi foto</button>' : '<button class="btn" data-act="shot">📸 Ambil Foto</button>') + '</div></div>';
+};
+V.done = function(){
+  var t = TYPES[st.type];
+  return '<div class="top"><button class="bk" data-act="nav" data-arg="home">←</button><h3>📋 Absensi</h3></div><div class="card dn"><div class="ck">✅</div><div class="ms">✅ Absensi (' + t.l + ') berhasil!</div><button class="btn" data-act="nav" data-arg="home">Kembali ke Home</button><button class="btn ol" data-act="absen">Absen Lagi</button></div>';
+};
+/* ---------- render ---------- */
+var NAVMAP = {home:"home", lb:"lb", prof:"prof", hr:"prof"};
+function render(keepScroll){
+  var y = app.scrollTop;
+  app.style.animation = "none"; void app.offsetWidth; app.style.animation = "";
+  app.innerHTML = V[st.screen]();
+  app.scrollTop = keepScroll ? y : 0;
+  var showNav = st.screen !== "login";
+  nav.style.display = showNav ? "" : "none";
+  var cur = NAVMAP[st.screen] || (st.screen === "type" || st.screen === "qr" || st.screen === "gps" || st.screen === "selfie" || st.screen === "done" ? "home" : "home");
+  Array.prototype.forEach.call(nav.querySelectorAll("button"), function(b){ b.classList.toggle("on", b.dataset.arg === cur); });
+  if(st.screen === "gps"){ gpsRun(); }
+}
+function go(s){ st.screen = s; render(); }
+var gtimer = null;
+function gpsRun(){
+  clearTimeout(gtimer);
+  gtimer = setTimeout(function(){
+    var b = app.querySelector("#gbox"), m = app.querySelector("#gmsg"); if(!b) return;
+    b.style.visibility = "visible"; m.textContent = "Lokasi ditemukan ✓";
+    gtimer = setTimeout(function(){ if(st.screen === "gps"){ shotTaken = false; setStep(6); go("selfie"); } }, 1100);
+  }, RM ? 100 : 1400);
+}
+function record(){
+  var t = TYPES[st.type], mins = NOW.getHours() * 60 + new Date().getMinutes(), before = rank();
+  var d = new Date(); mins = d.getHours() * 60 + d.getMinutes();
+  if(st.type === "masuk" || st.type === "dinas"){ st.masuk = mins; st.pts += mins > 8*60 ? 10 : 20; }
+  else if(st.type === "pulang" || st.type === "pulangL"){ st.pulang = mins; st.pts += 5; }
+  else if(st.type === "sakit"){ st.extra.sakit++; }
+  else { st.extra.ijin++; }
+  st.hist.push({l:t.l, t:hm(mins)});
+  st.moved = before - rank();
+}
+/* ---------- events ---------- */
+app.addEventListener("focusin", function(e){ if(e.target.id === "pin") setStep(1); });
+app.addEventListener("keydown", function(e){ if(e.target.id === "pin" && e.key === "Enter"){ act("login"); } });
+function act(a, arg){
+  if(st.busy && a !== "noop") return;
+  if(a === "login"){
+    var inp = app.querySelector("#pin");
+    if(inp && inp.value === "1234"){ setStep(2); go("home"); }
+    else { if(inp){ inp.classList.remove("shake"); void inp.offsetWidth; inp.classList.add("shake"); } toast("PIN salah. Coba 1234."); }
+  }
+  else if(a === "nav"){ var tab = arg; if(tab === "home") setStep(2); go(tab); }
+  else if(a === "absen"){ setStep(3); go("type"); }
+  else if(a === "type"){ st.type = arg; shotTaken = false; qrDone = false; if(TYPES[arg].k){ setStep(4); go("qr"); } else { setStep(5); go("gps"); } }
+  else if(a === "back"){ if(st.screen === "type"){ go("home"); } else { setStep(3); go("type"); } }
+  else if(a === "scan"){
+    var vf = app.querySelector("#vf"); if(!vf || qrDone) return; qrDone = true; vf.classList.add("ok"); st.busy = true;
+    setTimeout(function(){ st.busy = false; if(st.screen === "qr"){ setStep(5); go("gps"); } }, RM ? 100 : 1100);
+  }
+  else if(a === "shot"){
+    var cam = app.querySelector("#cam"); if(cam && !RM){ cam.classList.add("flash"); }
+    st.busy = true; setTimeout(function(){ st.busy = false; shotTaken = true; setStep(7); render(true); }, RM ? 50 : 350);
+  }
+  else if(a === "retake"){ shotTaken = false; setStep(6); render(true); }
+  else if(a === "submit"){
+    st.busy = true; var b = app.querySelector("[data-act=submit]"); if(b){ b.textContent = "Mengirim…"; }
+    setTimeout(function(){ st.busy = false; record(); setStep(8); go("done"); if(st.moved > 0){ setTimeout(function(){ toast("Poin +" + (TYPES[st.type].k && st.type === "masuk" ? "" : "") + "bertambah. Peringkat naik ke #" + rank() + "!"); }, 500); } }, RM ? 100 : 900);
+  }
+  else if(a === "hr"){ go("hr"); }
+  else if(a === "noop"){ toast("Fitur ini tidak tersedia di demo."); }
+}
+app.addEventListener("click", function(e){
+  var t = e.target.closest("[data-act]"); if(!t || !app.contains(t)) return;
+  act(t.dataset.act, t.dataset.arg);
+});
+nav.addEventListener("click", function(e){
+  var b = e.target.closest("button"); if(!b) return; if(st.screen === "login") return;
+  if(b.dataset.arg === "home") setStep(2);
+  go(b.dataset.arg);
+});
+var rst = dlg.querySelector(".demoreset");
+function start(){ reset(); setStep(0); render(); }
+if(rst) rst.addEventListener("click", start);
+start();
 })();
 </script>
 </body>
