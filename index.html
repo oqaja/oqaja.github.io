@@ -492,6 +492,91 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 .phone .toast{position:absolute;left:18px;right:18px;bottom:88px;background:#3A3550;color:#fff;border-radius:16px;padding:12px 16px;font-size:11.5px;font-weight:600;text-align:center;z-index:5;animation:scin .25s}
 @media (max-width:900px){.demowrap{grid-template-columns:1fr;justify-items:center}.demoside{max-width:none;width:100%}.demoside{order:-1}}
 @media (max-width:420px){.phone{width:100%;height:680px;border-radius:38px}}
+
+.t-ops{grid-column:1/-1;background:#FFF0B8;min-height:260px;flex-direction:row;align-items:stretch;gap:24px}
+.t-ops .plus{background:var(--ink)}
+.t-ops .tx{flex:1;display:flex;flex-direction:column;min-width:0}
+.t-ops h3{max-width:20ch}
+.t-ops .d{margin:10px 0 0;max-width:46ch;font-size:15px;opacity:.85}
+.t-ops .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.t-ops .chips span{padding:5px 12px;border:1.5px solid rgba(19,36,27,.4);border-radius:99px;font-size:11.5px;font-weight:700}
+.t-ops .nums{display:flex;gap:26px;margin-top:auto;padding-top:20px}
+.t-ops .nums b{display:block;font-family:var(--display);font-weight:800;font-size:clamp(23.5px,2.7vw,36px);line-height:1;letter-spacing:-.03em}
+.t-ops .nums span{font-size:11.5px;opacity:.75}
+.t-ops .mini{flex:none;align-self:center;width:min(38%,380px);background:#fff;border-radius:16px;box-shadow:0 18px 30px -18px rgba(19,36,27,.5);padding:0;overflow:hidden;transform:rotate(2deg);margin-right:36px;font-size:9px}
+.t-ops .mini i{display:grid;grid-template-columns:22px 1.3fr .95fr .95fr .95fr;border-bottom:1px solid #E1E7E9;font-style:normal}
+.t-ops .mini i span{padding:6px 8px;border-right:1px solid #E1E7E9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t-ops .mini i:first-child{background:#EAF0F2;font-weight:700}
+.t-ops .mini i span:first-child{background:#EAF0F2;color:#7A8A92;text-align:center}
+.t-ops .mini .g{color:#1E7A52;font-weight:700}.t-ops .mini .y{color:#A77800;font-weight:700}
+.xflow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap)}
+.xflow li{background:var(--paper);border-radius:22px;padding:22px;position:relative}
+.xflow .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--yellow);font-family:var(--display);font-weight:800;font-size:14px}
+.xflow li:nth-child(3) .n{background:var(--orange);color:#fff}
+.xflow h4{margin:12px 0 4px;font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.02em}
+.xflow p{margin:0;font-size:13.5px;color:var(--ink2);line-height:1.55}
+.xl{background:var(--paper);border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+.xinfo{padding:22px 24px 16px}
+.xinfo h4{margin:0 0 6px;font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.02em}
+.xinfo p{margin:0 0 12px;font-size:14px;color:var(--ink2);max-width:70ch}
+.xm{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}
+.xk{font-size:11.5px;font-weight:700;color:var(--ink2);margin-right:4px}
+.xc{padding:4px 11px;border-radius:99px;background:#fff;border:1px solid var(--line);font-size:11.5px;font-weight:700}
+.xc.md{background:var(--mint);border-color:transparent;color:var(--green)}
+.xg{overflow-x:auto;border-top:1px solid var(--line);background:#fff}
+.xg table{border-collapse:collapse;width:100%;min-width:640px;font-size:12px}
+.xg th,.xg td{border:1px solid #E1E7E9;padding:7px 10px;text-align:left;white-space:nowrap;font-weight:500}
+.xg thead th{background:#EAF0F2;font-weight:700;font-size:11px;letter-spacing:.02em}
+.xg thead th.au{background:var(--mint);color:var(--green)}
+.xg .rn{width:34px;min-width:34px;text-align:center;background:#EAF0F2;color:#7A8A92;font-weight:600;padding:7px 4px}
+.xs{display:inline-block;padding:2px 9px;border-radius:99px;font-weight:700;font-size:11px;background:#EEF2F3}
+.xs.ok{background:#DDF3E7;color:#1E7A52}.xs.warn{background:#FFF0BF;color:#8C6700}.xs.bad{background:#FFDDD5;color:#B5361B}.xs.mute{background:#E8EAF3;color:#4B5476}
+.xtabs{display:flex;overflow-x:auto;background:#EAF0F2;border-top:1px solid var(--line);scrollbar-width:thin}
+.xtabs button{flex:none;border:0;background:none;padding:11px 16px;font-size:11.5px;font-weight:700;letter-spacing:.02em;cursor:pointer;color:var(--ink2);border-right:1px solid #D6DEE1;font-family:inherit;transition:background .2s}
+.xtabs button:hover{background:rgba(255,255,255,.6)}
+.xtabs button[aria-selected=true]{background:#fff;color:var(--green);box-shadow:inset 0 -3px 0 var(--green)}
+.xnote{margin:10px 6px 0;font-size:12.5px;color:var(--ink2)}
+@media (max-width:900px){.t-ops{flex-direction:column}.t-ops .mini{display:none}.xflow{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.xflow{grid-template-columns:1fr}.xinfo{padding:18px 16px 14px}}
+
+.xguide{margin:0 0 18px;padding-left:22px;display:grid;gap:6px;font-size:14.5px}
+.dsk{background:#fff;border-radius:18px;overflow:hidden;border:1px solid rgba(19,36,27,.2);box-shadow:0 34px 60px -30px rgba(19,36,27,.55);position:relative}
+.dbar{background:#E3E9EB;padding:10px 14px;display:flex;align-items:center;gap:12px}
+.dots{display:flex;gap:6px}.dots i{width:11px;height:11px;border-radius:50%;background:#FF6B5B}.dots i:nth-child(2){background:#FFC72C}.dots i:nth-child(3){background:#3DBE7A}
+.durl{flex:1;min-width:0;background:#fff;border-radius:99px;padding:5px 14px;font-size:11.5px;color:#5A6A62;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.xreset{border:0;border-radius:99px;padding:6px 12px;background:#fff;font-size:11.5px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--ink)}
+.xreset:hover{background:var(--yellow)}
+.dhead{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid #E1E7E9;font-size:15px;flex-wrap:wrap}
+.dlogo{width:20px;height:26px;border-radius:4px;background:#1E8E5A;position:relative;flex:none}
+.dlogo::after{content:"";position:absolute;inset:7px 4px 4px;border:1.5px solid #fff;border-radius:2px}
+.dsave{margin-left:auto;font-size:11.5px;color:var(--ink2);background:#EAF7EF;border-radius:99px;padding:5px 12px}
+.dsave b{color:#1E7A52}
+.drole{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:12px 18px 0}
+.xr{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .2s}
+.xr:hover{background:#F1F5F6}
+.xr[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.xrt{margin:8px 18px 12px;font-size:13px;color:var(--ink2)}
+.dsk .xl{border:0;border-radius:0;border-top:1px solid #E1E7E9}
+.xtabs button.hl::after{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--orange);margin-left:7px;vertical-align:middle}
+.xctl{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.xb2{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:7px 14px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+.xb2:hover{background:#F1F5F6}.xb2.pri{background:var(--green);color:#fff;border-color:var(--green)}.xb2.pri:hover{background:#15402E}
+.xb2:disabled{opacity:.5;cursor:default}
+.xadd{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.xadd[hidden]{display:none}
+.xadd input[type=text]{flex:1 1 180px;min-width:0}
+.xadd input[type=text],.xadd select{border:1.5px solid #DCE3E5;border-radius:10px;padding:7px 10px;font:inherit;font-size:12.5px;background:#fff}
+.xadd label{font-size:12px;font-weight:700;display:flex;gap:4px;align-items:center}
+.xhint{margin:10px 0 0;font-size:12.5px;color:var(--ink2)}
+.xs.up{background:#E3EEFF;color:#2457B5}
+button.xs{border:0;font-family:inherit;cursor:pointer}
+button.xs.bad:hover{background:#FFC9BC}
+.xchk{border:1.5px solid #CBD5D8;background:#fff;border-radius:8px;width:28px;height:24px;cursor:pointer;font-size:13px;font-weight:700;color:#1E7A52}
+.xchk[aria-pressed=true]{background:#DDF3E7;border-color:#9ED8B8}
+.xtoast{position:absolute;left:50%;bottom:56px;transform:translate(-50%,12px);background:var(--ink);color:#fff;border-radius:12px;padding:10px 16px;font-size:12.5px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:90%;text-align:center;z-index:3}
+.xtoast.on{opacity:1;transform:translate(-50%,0)}
+.xg td.n{text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.dhead{padding:10px 14px}.dsave{margin-left:0}.drole{padding:10px 14px 0}.xrt{margin:8px 14px 10px}.durl{display:none}.dbar{justify-content:space-between}}
 </style>
 </head>
 <body>
@@ -594,6 +679,24 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
     <h3>Absensi daring melalui ponsel</h3>
     <div class="chips"><span>PIN</span><span>QR code</span><span>Lokasi</span><span>Selfie</span></div>
     <div class="nums"><div><b>10</b><span>karyawan</span></div><div><b>3 bln</b><span>berjalan</span></div><div><b>9</b><span>langkah</span></div></div>
+  </button>
+
+  <button type="button" class="tile t-ops" data-open="operasional">
+    <span class="plus" aria-hidden="true"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M9 2v14M2 9h14"/></svg></span>
+    <div class="tx">
+      <p class="lab">Sistem operasional, Google Sheets</p>
+      <h3>Dashboard Kulturama</h3>
+      <p class="d">Satu spreadsheet untuk seluruh alur kerja konten, dengan automasi upload ke sosial media.</p>
+      <div class="chips"><span>YouTube Shorts</span><span>Instagram</span><span>TikTok</span></div>
+      <div class="nums"><div><b>10</b><span>karyawan</span></div><div><b>6 bln</b><span>berjalan</span></div><div><b>9</b><span>tab</span></div></div>
+    </div>
+    <div class="mini" aria-hidden="true">
+      <i><span></span><span>Judul</span><span>YT</span><span>IG</span><span>TT</span></i>
+      <i><span>1</span><span>Konten contoh 01</span><span class="g">Uploaded</span><span class="g">Uploaded</span><span class="y">Scheduled</span></i>
+      <i><span>2</span><span>Konten contoh 02</span><span class="g">Uploaded</span><span></span><span class="g">Uploaded</span></i>
+      <i><span>3</span><span>Konten contoh 03</span><span class="y">Scheduled</span><span class="y">Scheduled</span><span class="y">Scheduled</span></i>
+      <i><span>4</span><span>Konten contoh 04</span><span></span><span class="g">Uploaded</span><span></span></i>
+    </div>
   </button>
 
   <button type="button" class="tile t-des" data-open="desain">
@@ -750,6 +853,29 @@ dialog.lb .close{position:absolute;top:16px;right:16px}
 <div class="afs"><div class="af"><h4>Absensi karyawan</h4><p>Absen masuk melalui ponsel dengan PIN, QR, lokasi, dan selfie.</p><span class="chipst">Aktif</span></div><div class="af"><h4>Leaderboard</h4><p>Peringkat kehadiran karyawan.</p><span class="chipst">Aktif</span></div><div class="af"><h4>Dashboard HR</h4><p>HR mengecek semua absensi karyawan dalam satu tempat.</p><span class="chipst">Aktif</span></div><div class="af soon"><h4>Slip gaji</h4><p>Slip gaji karyawan yang dibuat otomatis.</p><span class="chipst">Dalam pengembangan</span></div></div>
 <p class="lead" style="margin-top:20px">Dibangun sebagai aplikasi web (PWA) yang bisa dipasang di ponsel.</p>
 </div></dialog>
+<dialog class="sheet" id="sheet-operasional" aria-labelledby="h-ops"><div class="sheet-in">
+<div class="sheet-bar"><span class="ttl">Sistem internal</span><button type="button" class="close"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></div>
+<p class="tag">Sistem operasional konten, dirancang dan dibangun sendiri</p>
+<h2 id="h-ops">Dashboard Kulturama: sistem operasional konten tim berbasis Google Sheets</h2>
+<p class="lead">Seluruh alur kerja konten tim, dari perencanaan sampai pelaporan KPI, dikelola dalam satu spreadsheet. Struktur tab, kolom, alur kerja, dan sistem automasinya saya rancang dan bangun sendiri. Setiap role punya tab dan tugas masing-masing, dan upload ke sosial media berjalan otomatis dari jadwal di kalender.</p>
+<div class="pstats"><div><b>10</b><span>karyawan pengguna</span></div><div><b>6 bulan</b><span>sudah berjalan</span></div><div><b>9</b><span>tab terintegrasi</span></div><div><b>10 menit</b><span>waktu upload manual per konten, kini otomatis</span></div></div>
+<div class="ba"><div><span class="r">Sebelum Juni 2026</span><p>Tiga producer, satu untuk tiap platform, mengunggah konten secara manual. Setiap unggahan memakan sekitar 10 menit dan menguras memori ponsel.</p></div><div><span class="r">Sejak Juni 2026</span><p>Jadwal di kalender diunggah otomatis ke YouTube Shorts, Instagram (carousel dan reels), serta TikTok (video dan carousel). Status dan insight performa tercatat otomatis.</p></div></div>
+<div class="fmt" style="margin-bottom:12px"><h4>Alur kerja</h4><p class="fdesc">Dari rencana konten sampai laporan performa.</p></div>
+<ol class="xflow"><li><span class="n">1</span><h4>Rencana</h4><p>Producer mengisi judul, akun, segmen, jenis konten, tanggal, dan jam upload di Kalender Konten.</p></li><li><span class="n">2</span><h4>Pengerjaan</h4><p>Writer, videographer, designer, editor, dan talent menandai tugasnya masing-masing.</p></li><li><span class="n">3</span><h4>Upload otomatis</h4><p>Sistem mengunggah sesuai jadwal ke YouTube Shorts, Instagram, dan TikTok.</p></li><li><span class="n">4</span><h4>Pencatatan</h4><p>Post ID, status upload, dan insight performa terisi otomatis kembali ke sheet.</p></li></ol>
+<div class="fmt" style="margin:34px 0 12px"><h4>Coba sendiri</h4><p class="fdesc">Layar di bawah adalah tiruan spreadsheet dengan data contoh, bukan data perusahaan.</p></div>
+<ol class="xguide"><li>Pilih role, misalnya <b>Producer</b>, untuk melihat tab yang dipakainya.</li><li>Di <b>Kalender Konten</b>, tambahkan konten baru.</li><li>Tekan <b>Jalankan automasi upload</b> dan lihat statusnya berubah.</li><li>Buka tab <b>Status</b> dan <b>Insight</b> untuk melihat hasilnya.</li></ol>
+<div class="dsk" role="application" aria-label="Demo Dashboard Kulturama">
+<div class="dbar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="durl">sheets.google.com / Dashboard Kulturama</span><button type="button" class="xreset">Ulangi demo</button></div>
+<div class="dhead"><span class="dlogo" aria-hidden="true"></span><b>Dashboard Kulturama</b><span class="dsave">Waktu upload manual yang dihemat: <b id="xsv">0 menit</b></span></div>
+<div class="drole"><span class="xk">Masuk sebagai</span><button type="button" class="xr" data-r="0" aria-pressed="true">Producer</button><button type="button" class="xr" data-r="1" aria-pressed="false">Editor</button><button type="button" class="xr" data-r="2" aria-pressed="false">Marketing</button><button type="button" class="xr" data-r="3" aria-pressed="false">Head of Creative</button><button type="button" class="xr" data-r="4" aria-pressed="false">Head of Production</button></div>
+<p class="xrt" id="xrt">Mengisi judul, akun, segmen, tanggal, jenis konten, dan jam upload di Kalender Konten.</p>
+<div class="xl"><div class="xpan"><div class="xp" role="tabpanel" id="xp0" data-dyn="dash"><div class="xinfo"><h4>DASHBOARD</h4><p>Halaman awal seluruh karyawan untuk melihat tugas hari itu, sekaligus pembuka briefing pagi.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Seluruh karyawan</span></div><p class="xhint">Klik kolom Produksi untuk menandai konten selesai dikerjakan.</p></div><div class="xg"></div></div><div class="xp" role="tabpanel" id="xp1" data-dyn="cal" hidden><div class="xinfo"><h4>KALENDER KONTEN</h4><p>Semua konten dari bulan sebelumnya sampai rencana ke depan. Tiap role mengisi tugasnya di sini. Producer mengisi judul, akun, segmen, tanggal, jenis konten, dan jam upload per platform. Kolom hijau terisi otomatis oleh sistem.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Producer</span><span class="xc">Writer</span><span class="xc">Videographer</span><span class="xc">Designer</span><span class="xc">Editor</span><span class="xc">Marketing</span><span class="xc">Talent</span></div><div class="xm"><span class="xk">Pengisian</span><span class="xc md">Manual, dengan kolom otomatis</span></div><div class="xctl"><button type="button" class="xb2" data-x2="add">+ Tambah konten</button><button type="button" class="xb2 pri" data-x2="run">&#9654; Jalankan automasi upload</button></div><form class="xadd" hidden><input type="text" name="t" maxlength="60" placeholder="Judul konten" aria-label="Judul konten" required><select name="a" aria-label="Akun"><option>SP</option><option>NSP</option><option>FP</option></select><select name="j" aria-label="Jenis konten"><option>Video Pendek</option><option>Video Panjang</option><option>Desain</option></select><select name="h" aria-label="Jam upload"><option>18.15</option><option>20.15</option><option>21.15</option></select><label><input type="checkbox" name="yt" checked> YT</label><label><input type="checkbox" name="ig" checked> IG</label><label><input type="checkbox" name="tt" checked> TT</label><button type="submit" class="xb2 pri">Simpan</button></form></div><div class="xg"></div></div><div class="xp" role="tabpanel" id="xp2" data-dyn="stat" hidden><div class="xinfo"><h4>STATUS</h4><p>Dipakai untuk memeriksa hasil automasi upload hari itu: berhasil atau gagal, per platform.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Creative Director</span></div><div class="xm"><span class="xk">Pengisian</span><span class="xc md">Otomatis</span></div><p class="xhint">Klik status <b>Gagal</b> untuk mencoba unggah ulang.</p></div><div class="xg"></div></div><div class="xp" role="tabpanel" id="xp3" hidden><div class="xinfo"><h4>TIMELINE BEDAH</h4><p>Jadwal tahapan konten bedah sepatu, dari sepatu diterima sampai narasi selesai.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Marketing</span><span class="xc">Videographer</span><span class="xc">Producer</span></div></div><div class="xg"><table><thead><tr><th class="rn"></th><th class="">Brand</th><th class="">Artikel</th><th class="">Status</th><th class="">Jumlah</th><th class="">Size</th><th class="">Dipakai</th><th class="">Test</th><th class="">Potong + data</th><th class="">Narasi</th></tr></thead><tbody><tr><th class="rn">1</th><td>Brand A</td><td>Artikel 1</td><td><span class="xs ok">Ready</span></td><td>2</td><td>42, 43</td><td>04-Agu</td><td>04-Agu</td><td>11-Agu</td><td>20-Agu</td></tr><tr><th class="rn">2</th><td>Brand B</td><td>Artikel 2</td><td><span class="xs ok">Ready</span></td><td>1</td><td>44</td><td>18-Agu</td><td>18-Agu</td><td>19-Agu</td><td>20-Agu</td></tr><tr><th class="rn">3</th><td>Brand C</td><td>Artikel 3</td><td><span class="xs warn">Proses</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th class="rn">4</th><td>Brand D</td><td>Artikel 4</td><td><span class="xs ok">Ready</span></td><td>2</td><td>41, 46</td><td>14-Agu</td><td>14-Agu</td><td>11-Agu</td><td>18-Agu</td></tr></tbody></table></div></div><div class="xp" role="tabpanel" id="xp4" hidden><div class="xinfo"><h4>REPORT KREATIF</h4><p>Rekap kuantitas tim kreatif per minggu dan per bulan terhadap target, untuk memantau KPI.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Head of Creative</span></div></div><div class="xg"><table><thead><tr><th class="rn"></th><th class="">Konten</th><th class="">Minggu 1</th><th class="">Minggu 2</th><th class="">Minggu 3</th><th class="">Minggu 4</th><th class="">Bulan</th><th class="">Target</th><th class="">Progres</th></tr></thead><tbody><tr><th class="rn">1</th><td>Video Pendek</td><td>12</td><td>14</td><td>10</td><td>16</td><td>52</td><td>60</td><td><span class="xs ok">87%</span></td></tr><tr><th class="rn">2</th><td>Video Panjang</td><td>4</td><td>5</td><td>3</td><td>4</td><td>16</td><td>25</td><td><span class="xs warn">64%</span></td></tr><tr><th class="rn">3</th><td>Desain</td><td>15</td><td>17</td><td>16</td><td>18</td><td>66</td><td>60</td><td><span class="xs ok">110%</span></td></tr></tbody></table></div></div><div class="xp" role="tabpanel" id="xp5" hidden><div class="xinfo"><h4>REPORT PRODUKSI</h4><p>Rekap kuantitas tim produksi per bulan terhadap target, untuk memantau KPI.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Head of Production</span></div></div><div class="xg"><table><thead><tr><th class="rn"></th><th class="">Konten</th><th class="">Selesai</th><th class="">Target bulanan</th><th class="">Progres</th><th class="">Tanggal update</th></tr></thead><tbody><tr><th class="rn">1</th><td>Video Panjang</td><td>14</td><td>25</td><td><span class="xs warn">56%</span></td><td>30/09</td></tr><tr><th class="rn">2</th><td>Video Pendek</td><td>57</td><td>60</td><td><span class="xs ok">95%</span></td><td>30/09</td></tr><tr><th class="rn">3</th><td>Carousel</td><td>66</td><td>60</td><td><span class="xs ok">110%</span></td><td>30/09</td></tr><tr><th class="rn">4</th><td>Affiliate</td><td>310</td><td>400</td><td><span class="xs warn">78%</span></td><td>30/09</td></tr></tbody></table></div></div><div class="xp" role="tabpanel" id="xp6" hidden><div class="xinfo"><h4>SOW BRAND DEAL</h4><p>Rincian scope of work dari brand yang tap in, lengkap dengan status pengerjaannya per format.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Marketing</span><span class="xc">Head of Creative</span><span class="xc">Head of Production</span></div></div><div class="xg"><table><thead><tr><th class="rn"></th><th class="">Brand</th><th class="">Artikel</th><th class="">Sepatu</th><th class="">Status</th><th class="">Carousel</th><th class="">Video pendek</th><th class="">Video panjang</th></tr></thead><tbody><tr><th class="rn">1</th><td>Brand A</td><td>Artikel 1</td><td>4</td><td><span class="xs ok">Diterima</span></td><td><span class="xs ok">2 Selesai</span></td><td><span class="xs ok">2 Selesai</span></td><td><span class="xs ok">1 Selesai</span></td></tr><tr><th class="rn">2</th><td>Brand B</td><td>Artikel 2</td><td>2</td><td><span class="xs ok">Diterima</span></td><td><span class="xs ok">1 Selesai</span></td><td><span class="xs warn">2 Kurang</span></td><td><span class="xs warn">1 Kurang</span></td></tr><tr><th class="rn">3</th><td>Brand C</td><td>Artikel 3</td><td>0</td><td><span class="xs mute">Pending</span></td><td>1</td><td>2</td><td>1</td></tr><tr><th class="rn">4</th><td>Brand D</td><td>Artikel 4</td><td>1</td><td><span class="xs ok">Diterima</span></td><td><span class="xs ok">1 Selesai</span></td><td><span class="xs ok">1 Selesai</span></td><td></td></tr></tbody></table></div></div><div class="xp" role="tabpanel" id="xp7" hidden><div class="xinfo"><h4>INSIGHT PLATFORM</h4><p>Diisi manual setiap hari untuk melihat KPI kualitas: views, engagement, dan revenue per platform, dengan penanda naik atau turun.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Head of Creative</span></div><div class="xm"><span class="xk">Pengisian</span><span class="xc md">Manual, harian</span></div></div><div class="xg"><table><thead><tr><th class="rn"></th><th class="">Tanggal</th><th class="">IG views</th><th class="">IG engage</th><th class="">TikTok views</th><th class="">TikTok revenue</th><th class="">YouTube views</th><th class="">YouTube revenue</th></tr></thead><tbody><tr><th class="rn">1</th><td>01-Sep</td><td>210.400 ▲</td><td>6.210 ▲</td><td>301.200 ▼</td><td>Rp48.000 ▼</td><td>180.300 ▲</td><td>Rp310.000 ▲</td></tr><tr><th class="rn">2</th><td>02-Sep</td><td>188.900 ▼</td><td>5.870 ▼</td><td>254.800 ▼</td><td>Rp31.500 ▼</td><td>176.100 ▼</td><td>Rp192.400 ▼</td></tr><tr><th class="rn">3</th><td>03-Sep</td><td>240.100 ▲</td><td>7.040 ▲</td><td>289.300 ▲</td><td>Rp52.900 ▲</td><td>190.700 ▲</td><td>Rp402.100 ▲</td></tr><tr><th class="rn">4</th><td>04-Sep</td><td>232.700 ▼</td><td>6.900 ▼</td><td>310.600 ▲</td><td>Rp44.300 ▼</td><td>188.200 ▼</td><td>Rp268.700 ▼</td></tr></tbody></table></div></div><div class="xp" role="tabpanel" id="xp8" data-dyn="ins" hidden><div class="xinfo"><h4>INSIGHT</h4><p>Data performa setiap konten di YouTube, Instagram, dan TikTok. Sepenuhnya ditarik otomatis oleh sistem automasi upload.</p><div class="xm"><span class="xk">Dipakai oleh</span><span class="xc">Sistem automasi</span></div><div class="xm"><span class="xk">Pengisian</span><span class="xc md">Otomatis</span></div></div><div class="xg"></div></div></div><div class="xtabs" role="tablist" aria-label="Tab spreadsheet"><button type="button" role="tab" aria-selected="true" aria-controls="xp0" data-x="0">DASHBOARD</button><button type="button" role="tab" aria-selected="false" aria-controls="xp1" data-x="1">KALENDER KONTEN</button><button type="button" role="tab" aria-selected="false" aria-controls="xp2" data-x="2">STATUS</button><button type="button" role="tab" aria-selected="false" aria-controls="xp3" data-x="3">TIMELINE BEDAH</button><button type="button" role="tab" aria-selected="false" aria-controls="xp4" data-x="4">REPORT KREATIF</button><button type="button" role="tab" aria-selected="false" aria-controls="xp5" data-x="5">REPORT PRODUKSI</button><button type="button" role="tab" aria-selected="false" aria-controls="xp6" data-x="6">SOW BRAND DEAL</button><button type="button" role="tab" aria-selected="false" aria-controls="xp7" data-x="7">INSIGHT PLATFORM</button><button type="button" role="tab" aria-selected="false" aria-controls="xp8" data-x="8">INSIGHT</button></div></div>
+<div class="xtoast" id="xtoast" role="status" aria-live="polite"></div>
+</div>
+<p class="xnote">Kolom bertanda hijau terisi otomatis oleh sistem. Automasi untuk Facebook belum diaktifkan. Estimasi waktu dihitung dari 10 menit per unggahan manual.</p>
+<div class="fmt" style="margin:30px 0 12px"><h4>Dari data sistem</h4></div>
+<div class="afs"><div class="af"><h4>1.075</h4><p>konten tercatat di Kalender Konten sejak 26 Maret 2026: 483 desain, 431 video pendek, dan 128 video panjang.</p></div><div class="af"><h4>8.090</h4><p>konten yang performanya terpantau otomatis di tab Insight, dari YouTube, Instagram, dan TikTok.</p></div></div>
+</div></dialog>
 
 <dialog class="lb" id="lb" aria-label="Pratinjau gambar"><img id="lbimg" src="" alt=""><button type="button" class="close" id="lbclose"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg> Tutup</button></dialog>
 
@@ -775,7 +901,7 @@ var tiles = {};
 document.querySelectorAll("[data-open]").forEach(function(t){ tiles[t.dataset.open] = t; });
 var current = null;
 
-var COLORS = {ortuseight:"#FFC72C", program:"#1B4D38", desain:"#93D2EE", cv:"#F8FAFA", jalaton:"#BFE8CF", kluk:"#13241B", absensi:"#FFD3C2"};
+var COLORS = {ortuseight:"#FFC72C", program:"#1B4D38", desain:"#93D2EE", cv:"#F8FAFA", jalaton:"#BFE8CF", kluk:"#13241B", absensi:"#FFD3C2", operasional:"#FFF0B8"};
 
 function openSheet(id, fromTile, instant){
   var d = sheets[id]; if(!d || current === id) return;
@@ -1282,6 +1408,110 @@ var rst = dlg.querySelector(".demoreset");
 function start(){ reset(); setStep(0); render(); }
 if(rst) rst.addEventListener("click", start);
 start();
+})();
+
+(function(){
+var dlg=document.getElementById("sheet-operasional"); if(!dlg) return;
+var $=function(s,r){return (r||dlg).querySelector(s)}, $$=function(s,r){return [].slice.call((r||dlg).querySelectorAll(s))};
+var tabs=$$(".xtabs button"), ps=$$(".xp"), roleBtns=$$(".xr"), toastEl=$("#xtoast"), svEl=$("#xsv"), rt=$("#xrt");
+var ROLES=[["Producer", "Mengisi judul, akun, segmen, tanggal, jenis konten, dan jam upload di Kalender Konten.", [0, 1, 3]], ["Editor", "Melihat tugas hari ini di Dashboard dan menandai pengerjaan di Kalender Konten.", [0, 1]], ["Marketing", "Memantau jadwal bedah sepatu dan SOW brand yang tap in.", [3, 6]], ["Head of Creative", "Memeriksa KPI kuantitas, mengisi insight platform harian, dan mengecek status upload.", [2, 4, 6, 7]], ["Head of Production", "Memeriksa KPI kuantitas tim produksi dan SOW brand.", [5, 6]]];
+var TODAY="06 Okt", seq=0, st, tmr;
+function fmt(n){return n.toLocaleString("id-ID")}
+function pid(){seq++; var c="abcdefghijkmnpqrstuvwxyz23456789",s="",x=seq*7919+13; for(var i=0;i<6;i++){s+=c[x%c.length];x=Math.floor(x/3)+seq+i*5} return s+"…"}
+function cell(t,s,v){return {t:t,s:s||"",v:v||0}}
+function seed(){
+ seq=0;
+ return {saved:0,rows:[
+  {d:"05 Okt",t:"Konten contoh 01",a:"SP",j:"Video Pendek",p:"Producer A",e:"Editor A",prod:true,b:"",yt:cell("21.45","Uploaded",2670),ig:cell(""),tt:cell("21.45","Uploaded",8410),pid:"kj3mfu…"},
+  {d:"05 Okt",t:"Konten contoh 02",a:"SP",j:"Desain",p:"Producer B",dz:"Designer A",prod:true,b:"",yt:cell(""),ig:cell("18.15","Uploaded",12994),tt:cell(""),pid:"1811…71"},
+  {d:"05 Okt",t:"Konten contoh 03",a:"NSP",j:"Desain",p:"Producer A",dz:"Designer A",prod:true,b:"",yt:cell(""),ig:cell("16.00","Uploaded",1973),tt:cell(""),pid:"1812…12"},
+  {d:TODAY,t:"Konten contoh 04",a:"SP",j:"Video Pendek",p:"Producer B",e:"Editor B",prod:true,b:"Brand A",yt:cell("20.15","Scheduled"),ig:cell("20.15","Scheduled"),tt:cell("20.15","Scheduled"),failTT:true,pid:""},
+  {d:TODAY,t:"Konten contoh 05",a:"FP",j:"Desain",p:"Producer C",dz:"Designer A",prod:false,b:"",yt:cell(""),ig:cell("18.15","Scheduled"),tt:cell(""),pid:""},
+  {d:TODAY,t:"Konten contoh 06",a:"SP",j:"Video Panjang",p:"Producer A",e:"Editor A",prod:false,b:"",yt:cell("19.30","Scheduled"),ig:cell(""),tt:cell(""),pid:""}
+ ]};
+}
+function chip(c,retry,i,pf){
+ if(!c.t) return "";
+ var s=c.s; if(!s) return "";
+ if(s==="Uploaded") return '<span class="xs ok">Uploaded</span>';
+ if(s==="Scheduled") return '<span class="xs warn">Scheduled</span>';
+ if(s==="Mengunggah") return '<span class="xs up">Mengunggah…</span>';
+ if(s==="Gagal") return retry ? '<button type="button" class="xs bad" data-retry="'+i+'" data-pf="'+pf+'" title="Coba unggah ulang">Gagal</button>' : '<span class="xs bad">Gagal</span>';
+ return s;
+}
+function table(head,rows){
+ return '<table><thead><tr><th class="rn"></th>'+head.map(function(h){return '<th'+(h[1]?' class="au"':'')+'>'+h[0]+'</th>'}).join("")+'</tr></thead><tbody>'+rows.map(function(r,i){return '<tr><th class="rn">'+(i+1)+'</th>'+r.join("")+'</tr>'}).join("")+'</tbody></table>';
+}
+function td(x,c){return '<td'+(c?' class="'+c+'"':'')+'>'+x+'</td>'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(m){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}
+function renderCal(){
+ var rows=st.rows.map(function(r){return [td(r.d+" 2026"),td(esc(r.t)),td(r.a),td(r.j),td(r.yt.t),td(r.ig.t),td(r.tt.t),td(chip(r.yt)),td(chip(r.ig)),td(chip(r.tt)),td(r.pid)]});
+ return table([["Tanggal"],["Judul konten"],["Akun"],["Jenis"],["Jam YT"],["Jam IG"],["Jam TT"],["Status YT",1],["Status IG",1],["Status TT",1],["Post ID",1]],rows);
+}
+function note(r){
+ var cs=[["YT",r.yt],["IG",r.ig],["TT",r.tt]].filter(function(x){return x[1].t});
+ var bad=cs.filter(function(x){return x[1].s==="Gagal"});
+ if(bad.length) return bad.map(function(x){return x[0]}).join(", ")+": gagal, perlu dicek";
+ if(cs.some(function(x){return x[1].s==="Mengunggah"})) return "Sedang mengunggah";
+ if(cs.length && cs.every(function(x){return x[1].s==="Uploaded"})) return "Semua platform sukses";
+ return "Menunggu jadwal";
+}
+function renderStat(){
+ var rows=st.rows.filter(function(r){return r.d===TODAY}).map(function(r,k){var i=st.rows.indexOf(r);return [td(esc(r.t)),td(r.a),td(r.j),td(chip(r.yt,1,i,"yt")),td(chip(r.ig,1,i,"ig")),td(chip(r.tt,1,i,"tt")),td(note(r))]});
+ return table([["Judul konten"],["Akun"],["Jenis"],["Status YT",1],["Status IG",1],["Status TT",1],["Catatan",1]],rows);
+}
+function renderDash(){
+ var rows=st.rows.filter(function(r){return r.d===TODAY}).map(function(r){var i=st.rows.indexOf(r);return [td(esc(r.t)),td(r.a),td(r.j),td(r.p),td(r.dz||""),td(r.e||""),td('<button type="button" class="xchk" data-prod="'+i+'" aria-pressed="'+(r.prod?"true":"false")+'" aria-label="Produksi selesai">'+(r.prod?"✓":"")+'</button>'),td(r.b)]});
+ return table([["Judul konten"],["Akun"],["Jenis"],["Producer"],["Designer"],["Editor"],["Produksi"],["Brand tap in"]],rows);
+}
+function renderIns(){
+ var out=[],P=[["yt","YouTube"],["ig","Instagram"],["tt","TikTok"]];
+ st.rows.slice().reverse().forEach(function(r){P.forEach(function(p){var c=r[p[0]]; if(c.s==="Uploaded"){var v=c.v; out.push([td(r.d.replace(" Okt","/10")+" "+c.t.replace(".",":")),td(esc(r.t)),td(r.j),td(p[1]),td(fmt(v),"n"),td(fmt(Math.round(v*0.027)),"n"),td(fmt(Math.round(v*0.0008)),"n"),td(r.d===TODAY?"hari ini":"06/10 07:35")])}})});
+ return table([["Tanggal upload",1],["Judul",1],["Jenis",1],["Platform",1],["Views",1],["Likes",1],["Comments",1],["Terakhir update",1]],out);
+}
+var REN={cal:renderCal,stat:renderStat,dash:renderDash,ins:renderIns};
+function renderAll(){ ps.forEach(function(p){var k=p.getAttribute("data-dyn"); if(k){ $(".xg",p).innerHTML=REN[k](); } }); svEl.textContent=fmt(st.saved)+" menit"; }
+function toast(m){ toastEl.textContent=m; toastEl.classList.add("on"); clearTimeout(tmr); tmr=setTimeout(function(){toastEl.classList.remove("on")},2600); }
+function sel(i){ tabs.forEach(function(b,k){ b.setAttribute("aria-selected",k===i?"true":"false"); }); ps.forEach(function(p,k){ p.hidden=k!==i; }); }
+function role(i){ roleBtns.forEach(function(b,k){b.setAttribute("aria-pressed",k===i?"true":"false")}); rt.textContent=ROLES[i][1]; tabs.forEach(function(b,k){b.classList.toggle("hl",ROLES[i][2].indexOf(k)>-1)}); sel(ROLES[i][2][0]); if(i===0) toast("Producer mengisi jadwal di Kalender Konten"); }
+function runAuto(btn){
+ var q=[]; st.rows.forEach(function(r,i){["yt","ig","tt"].forEach(function(p){ if(r[p].s==="Scheduled") q.push([i,p]); }); });
+ if(!q.length){ toast("Tidak ada konten terjadwal. Tambahkan konten dulu."); return; }
+ btn.disabled=true; sel(1);
+ var ok=0,fail=0,k=0;
+ (function next(){
+  if(k>=q.length){ btn.disabled=false; toast("Automasi selesai: "+ok+" sukses"+(fail?", "+fail+" gagal. Cek tab Status.":".")); renderAll(); return; }
+  var it=q[k++], r=st.rows[it[0]], c=r[it[1]]; c.s="Mengunggah"; renderAll();
+  setTimeout(function(){
+   if(it[1]==="tt" && r.failTT){ c.s="Gagal"; r.failTT=false; fail++; }
+   else { c.s="Uploaded"; c.v=Math.round(900+((seq*7919+it[0]*131)%9000)); if(!r.pid) r.pid=pid(); ok++; st.saved+=10; }
+   renderAll(); next();
+  }, 520);
+ })();
+}
+dlg.addEventListener("click",function(e){
+ var t=e.target;
+ var ret=t.closest&&t.closest("[data-retry]");
+ if(ret){ var r=st.rows[+ret.getAttribute("data-retry")], c=r[ret.getAttribute("data-pf")]; c.s="Uploaded"; c.v=5400; if(!r.pid) r.pid=pid(); st.saved+=10; renderAll(); toast("Unggah ulang berhasil"); return; }
+ var pr=t.closest&&t.closest("[data-prod]");
+ if(pr){ var rr=st.rows[+pr.getAttribute("data-prod")]; rr.prod=!rr.prod; renderAll(); return; }
+ var b=t.closest&&t.closest("[data-x2]");
+ if(b){ var a=b.getAttribute("data-x2"); if(a==="add"){ var f=$(".xadd"); f.hidden=!f.hidden; if(!f.hidden) f.querySelector("input[type=text]").focus(); } else if(a==="run"){ runAuto(b); } return; }
+ if(t.closest&&t.closest(".xreset")){ st=seed(); renderAll(); role(0); sel(1); toast("Demo diulang"); }
+});
+var form=$(".xadd");
+form.addEventListener("submit",function(e){
+ e.preventDefault(); var d=new FormData(form), h=d.get("h"), title=String(d.get("t")||"").trim(); if(!title) return;
+ if(!d.get("yt")&&!d.get("ig")&&!d.get("tt")){ toast("Pilih minimal satu platform"); return; }
+ var j=d.get("j");
+ st.rows.push({d:TODAY,t:title,a:d.get("a"),j:j,p:"Producer A",e:j==="Desain"?"":"Editor A",dz:j==="Desain"?"Designer A":"",prod:false,b:"",
+  yt:cell(d.get("yt")?h:"",d.get("yt")?"Scheduled":""),ig:cell(d.get("ig")?h:"",d.get("ig")?"Scheduled":""),tt:cell(d.get("tt")?h:"",d.get("tt")?"Scheduled":""),pid:""});
+ form.reset(); form.hidden=true; renderAll(); toast("Konten ditambahkan dengan status Scheduled. Tekan Jalankan automasi upload.");
+});
+tabs.forEach(function(b,i){ b.addEventListener("click",function(){ sel(i); });
+ b.addEventListener("keydown",function(e){ var n=e.key==="ArrowRight"?i+1:e.key==="ArrowLeft"?i-1:-1; if(n>=0&&n<tabs.length){ sel(n); tabs[n].focus(); e.preventDefault(); } }); });
+roleBtns.forEach(function(b,i){ b.addEventListener("click",function(){ role(i); }); });
+st=seed(); renderAll(); tabs.forEach(function(b,k){b.classList.toggle("hl",ROLES[0][2].indexOf(k)>-1)}); sel(1);
 })();
 </script>
 </body>
