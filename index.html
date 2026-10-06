@@ -263,6 +263,80 @@
     display:block;
   }
 
+  /* PROGRAM */
+  .prog{padding:80px 0 72px; border-top:1px solid var(--line);}
+  .prog-head{margin-bottom:36px;}
+  .prog-head .tag{color:var(--accent); font-size:15px; font-weight:600; margin:0 0 10px;}
+  .prog-head h2{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(34px,5vw,56px);
+    margin:0 0 18px;
+    line-height:1.04;
+  }
+  .prog-head p{font-size:17px; color:var(--ink-muted); max-width:64ch; margin:0;}
+  .prog h3{font-family:var(--font-display); font-weight:700; font-size:22px; margin:0 0 8px;}
+  .prog-role{margin-bottom:44px;}
+  .prog-role p{font-size:16px; color:var(--ink-muted); max-width:64ch; margin:0;}
+  .prog-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-bottom:56px;
+    padding:28px 0;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .prog-stats .stat{border-left:2px solid var(--accent); padding:0 20px 0 16px;}
+  .prog-stats .num{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(28px,3.4vw,40px);
+    display:block;
+    line-height:1.05;
+  }
+  .prog-stats .label{font-size:13.5px; color:var(--ink-muted); margin-top:6px; display:block;}
+  .fmts{display:flex; flex-direction:column; gap:40px;}
+  .fmt h4{font-family:var(--font-display); font-weight:700; font-size:22px; margin:0 0 4px;}
+  .fmt .fdesc{font-size:15px; color:var(--ink-muted); margin:0 0 14px; max-width:60ch;}
+  .fmt .agg{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 22px;
+    margin:0 0 14px;
+    font-size:14px;
+    color:var(--ink-muted);
+  }
+  .fmt .agg b{color:var(--ink); font-weight:600;}
+  .fmt .agg .s b{color:var(--accent);}
+  .eps{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px;}
+  .ep{
+    display:grid;
+    grid-template-columns:1fr repeat(4,auto);
+    gap:6px 18px;
+    align-items:baseline;
+    padding:12px 16px;
+    background:var(--bg-panel);
+    border-left:2px solid var(--line);
+  }
+  .ep a{text-decoration:none; font-size:15px; font-weight:500; border-bottom:1px solid transparent;}
+  .ep a:hover{border-bottom-color:var(--ink);}
+  .ep .m{font-size:13px; color:var(--ink-muted); white-space:nowrap;}
+  .ep .m.s{color:var(--accent); font-weight:600;}
+  .soon{margin-top:56px; padding-top:28px; border-top:1px solid var(--line);}
+  .soon p{font-size:15px; color:var(--ink-muted); margin:0; max-width:60ch;}
+  .interest{margin-top:40px; padding-top:28px; border-top:1px solid var(--line);}
+  .interest > p{font-size:15px; color:var(--ink-muted); margin:0 0 16px; max-width:60ch;}
+  .interest ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px;}
+  .interest li{
+    display:grid;
+    grid-template-columns:minmax(200px,1fr) 1.4fr;
+    gap:4px 20px;
+    padding:12px 16px;
+    background:var(--bg-panel);
+    font-size:15px;
+  }
+  .interest .to{color:var(--ink-muted);}
+
   /* ART DIRECTION */
   .design{padding:80px 0 72px; border-top:1px solid var(--line);}
   .design-head{margin-bottom:44px;}
@@ -345,6 +419,7 @@
   .dgrid a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
   .dgrid a:hover img{opacity:.88;}
   .dgrid img{width:100%; height:auto; display:block;}
+  .dgroup .dgrid img{aspect-ratio:3/4; object-fit:cover; object-position:center top;}
   dialog.lb{
     border:0;
     padding:0;
@@ -409,6 +484,12 @@
     .act{grid-template-columns:1fr; gap:14px;}
     .act .num{font-size:44px;}
     .results .stats{grid-template-columns:repeat(2,1fr); row-gap:28px;}
+    .prog-stats{grid-template-columns:repeat(2,1fr); row-gap:24px;}
+    .results .stats .stat,.prog-stats .stat{min-width:0; padding-right:8px;}
+    .results .stats .stat .num,.prog-stats .num{font-size:24px; overflow-wrap:anywhere;}
+    .ep{grid-template-columns:1fr 1fr; }
+    .ep a{grid-column:1 / -1;}
+    .interest li{grid-template-columns:1fr;}
     .piece{grid-template-columns:1fr; gap:4px;}
     .dcase{grid-template-columns:1fr; gap:28px;}
     .dmeta h3{margin-bottom:24px;}
@@ -432,6 +513,7 @@
     <a class="brand" href="#top">Oky Nurdianto</a>
     <nav class="links">
       <a href="#kerja">Kerja</a>
+      <a href="#program">Program</a>
       <a href="#desain">Desain</a>
       <a href="#kontak">Kontak</a>
     </nav>
@@ -511,10 +593,118 @@
   <div class="wrap">
     <p class="lead">Dari 11 konten di YouTube, Instagram, dan TikTok selama April–Mei 2026. Penjualan dilacak lewat affiliate link YouTube Shoe Police.</p>
     <div class="stats">
-      <div class="stat"><span class="num">1.119.483</span><span class="label">total views</span></div>
+      <div class="stat"><span class="num">1.123.164</span><span class="label">total views</span></div>
       <div class="stat"><span class="num">Rp92.256.000</span><span class="label">tracked sales (YouTube)</span></div>
       <div class="stat"><span class="num">354</span><span class="label">orders</span></div>
       <div class="stat"><span class="num">~2 bulan</span><span class="label">durasi campaign</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="prog" id="program">
+  <div class="wrap">
+    <div class="prog-head">
+      <p class="tag">Program konten, dirancang dan dijalankan sebagai Creative Director</p>
+      <h2>The New Local Pride</h2>
+      <p>Brand lokal kurang punya panggung untuk eksis di scene footwear Indonesia. Program ini memberi mereka ruang untuk membuktikan kualitas dan menunjukkan perubahan strategi agar lebih relevan dengan zaman, lewat serangkaian format konten di YouTube Shoe Police.</p>
+    </div>
+
+    <div class="prog-role">
+      <h3>Peran</h3>
+      <p>Perencana utama: menyusun konsep visual dan tone of voice, mendraft isi konten, menjadi talent utama di beberapa episode, dan menjadi penghubung antara brand dengan Shoe Police.</p>
+    </div>
+
+    <div class="prog-stats">
+      <div class="stat"><span class="num">25</span><span class="label">episode ditampilkan</span></div>
+      <div class="stat"><span class="num">1.263.739</span><span class="label">total views</span></div>
+      <div class="stat"><span class="num">+6.487</span><span class="label">subscriber baru</span></div>
+      <div class="stat"><span class="num">8</span><span class="label">format sudah tayang</span></div>
+    </div>
+
+    <div class="fmts">
+        <div class="fmt">
+          <h4>Rekomendasi</h4>
+          <p class="fdesc">Rekomendasi sepatu brand lokal per kebutuhan dan budget.</p>
+          <ul class="eps">
+            <li class="ep"><a href="https://youtube.com/watch?v=4J6skn8H_9s" target="_blank" rel="noopener">Rekomendasi sepatu lokal terempuk</a><span class="m">215.962 views</span><span class="m">2.657 likes</span><span class="m">269 comments</span><span class="m s">+1.064 subs</span></li>
+<li class="ep"><a href="https://youtube.com/watch?v=k5WBSCX5CVE" target="_blank" rel="noopener">Rekomendasi sepatu lari 300 ribuan</a><span class="m">182.847 views</span><span class="m">1.960 likes</span><span class="m">185 comments</span><span class="m s">+621 subs</span></li>
+          </ul>
+        </div>
+        <div class="fmt">
+          <h4>Bedah Sepatu</h4>
+          <p class="fdesc">Membedah konstruksi sepatu untuk membuktikan kualitasnya.</p>
+          <ul class="eps">
+            <li class="ep"><a href="https://youtube.com/watch?v=IqHUGoWEecY" target="_blank" rel="noopener">Bedah sepatu Kanky Story Honjo</a><span class="m">202.972 views</span><span class="m">2.530 likes</span><span class="m">225 comments</span><span class="m s">+1.267 subs</span></li>
+<li class="ep"><a href="https://youtube.com/watch?v=4kIzKF6B42U" target="_blank" rel="noopener">Bedah sepatu Ortuseight Brisbane</a><span class="m">139.669 views</span><span class="m">2.045 likes</span><span class="m">297 comments</span><span class="m s">+977 subs</span></li>
+          </ul>
+        </div>
+        <div class="fmt">
+          <h4>Tierlist</h4>
+          <p class="fdesc">Peringkat sepatu lokal per kategori pemakaian.</p>
+          <ul class="eps">
+            <li class="ep"><a href="https://youtu.be/5tRHN36eg58" target="_blank" rel="noopener">Tierlist walking shoes lokal terbaik</a><span class="m">39.983 views</span><span class="m">525 likes</span><span class="m">73 comments</span><span class="m s">+78 subs</span></li>
+<li class="ep"><a href="https://youtube.com/watch?v=Vu7ZXLcZT0w" target="_blank" rel="noopener">Tierlist sepatu daily trainer lokal</a><span class="m">75.702 views</span><span class="m">753 likes</span><span class="m">110 comments</span><span class="m s">+138 subs</span></li>
+          </ul>
+        </div>
+        <div class="fmt">
+          <h4>Komparasi / Versus</h4>
+          <p class="fdesc">Adu langsung beberapa seri atau generasi produk.</p>
+          <ul class="eps">
+            <li class="ep"><a href="https://youtube.com/watch?v=j5OOSvpp6zs" target="_blank" rel="noopener">Ortuseight Hyperblast 2.0 vs 3.0</a><span class="m">27.556 views</span><span class="m">316 likes</span><span class="m">37 comments</span><span class="m s">+54 subs</span></li>
+<li class="ep"><a href="https://youtube.com/watch?v=TAKF-zEH8zo" target="_blank" rel="noopener">Weidenmann Hinterhalt 1 vs 2 vs 3</a><span class="m">6.695 views</span><span class="m">121 likes</span><span class="m">18 comments</span><span class="m s">+20 subs</span></li>
+          </ul>
+        </div>
+        <div class="fmt">
+          <h4>Sidak Toko</h4>
+          <p class="fdesc">Panduan isi toko: menjelaskan semua koleksi yang ada di dalamnya.</p>
+          <ul class="eps">
+            <li class="ep"><a href="https://youtube.com/watch?v=Srw5948j2uo" target="_blank" rel="noopener">Diskon gede-gedean di depan store 910nineten BSD</a><span class="m">30.524 views</span><span class="m">381 likes</span><span class="m">36 comments</span><span class="m s">+47 subs</span></li>
+<li class="ep"><a href="https://youtube.com/watch?v=E5ILuuDAMf4" target="_blank" rel="noopener">Deretan sendal Hijack paling affordable di tokonya</a><span class="m">2.765 views</span><span class="m">48 likes</span><span class="m">4 comments</span><span class="m s">+2 subs</span></li>
+          </ul>
+        </div>
+        <div class="fmt">
+          <h4>Liputan</h4>
+          <p class="fdesc">Meliput kabar, toko, dan acara rilisan brand lokal.</p>
+          <ul class="eps">
+            <li class="ep"><a href="https://youtube.com/watch?v=xwMJ9L7Oqr0" target="_blank" rel="noopener">Akhirnya ada store khusus brand lokal di Indonesia</a><span class="m">8.239 views</span><span class="m">129 likes</span><span class="m">27 comments</span><span class="m s">+17 subs</span></li>
+<li class="ep"><a href="https://youtube.com/watch?v=cKgk0Aa6ZV8" target="_blank" rel="noopener">Rilisan Ardiles tahun ini di acara FW26 Ardiles</a><span class="m">6.106 views</span><span class="m">71 likes</span><span class="m">19 comments</span><span class="m s">+2 subs</span></li>
+          </ul>
+        </div>
+        <div class="fmt">
+          <h4>Founder Talk</h4>
+          <p class="fdesc">Podcast Podboots bersama founder brand.</p>
+          <ul class="eps">
+            <li class="ep"><a href="https://youtube.com/watch?v=NRDae22IX7k" target="_blank" rel="noopener">Podboots with founder Don&#x27;s Original</a><span class="m">6.224 views</span><span class="m">200 likes</span><span class="m">72 comments</span><span class="m s">+27 subs</span></li>
+<li class="ep"><a href="https://youtube.com/watch?v=TO3jSxZbNG0" target="_blank" rel="noopener">Podboots with founder Junkard Boots</a><span class="m">5.684 views</span><span class="m">108 likes</span><span class="m">23 comments</span><span class="m s">+23 subs</span></li>
+          </ul>
+        </div>
+        <div class="fmt">
+          <h4>Detective Shoe</h4>
+          <p class="fdesc">Investigasi satu isu menarik di industri fashion dan sepatu, dari sudut pandang yang jarang dibahas.</p>
+          <p class="agg"><span><b>11</b> episode</span><span><b>312.811</b> views</span><span><b>5.788</b> likes</span><span><b>2.535</b> comments</span><span class="s"><b>+2.150</b> subs</span></p>
+          <ul class="eps">
+            <li class="ep"><a href="https://www.youtube.com/watch?v=TYrScxYvqRY" target="_blank" rel="noopener">Sepatu KW untuk SDM rendah</a><span class="m">67.900 views</span><span class="m">1.398 likes</span><span class="m">675 comments</span><span class="m s">+414 subs</span></li>
+<li class="ep"><a href="https://www.youtube.com/watch?v=tiqwOK8DmtE" target="_blank" rel="noopener">Kenapa thrift gak bisa dibasmi di Indonesia?</a><span class="m">53.733 views</span><span class="m">1.128 likes</span><span class="m">373 comments</span><span class="m s">+233 subs</span></li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="soon">
+      <h3>Segera hadir</h3>
+      <p>Kisah Brand dan Behind the Production, dua format berikutnya yang sedang disiapkan.</p>
+    </div>
+
+    <div class="interest">
+      <h3>Respons awal dari brand dan retail</h3>
+      <p>Sebelum semua format berjalan, beberapa pihak sudah menyatakan ketertarikan untuk tap in.</p>
+      <ul>
+        <li><span class="who">Marketplace besar</span><span class="to">tertarik tap in ke Rekomendasi</span></li>
+        <li><span class="who">Dua brand sepatu lokal</span><span class="to">tertarik tap in ke Rekomendasi</span></li>
+        <li><span class="who">Brand lokal</span><span class="to">tertarik tap in ke Detective Shoe</span></li>
+        <li><span class="who">Brand sepatu lokal</span><span class="to">tertarik tap in ke Komparasi / Versus</span></li>
+        <li><span class="who">Distributor brand global</span><span class="to">tertarik tap in ke Kisah Brand</span></li>
+        <li><span class="who">Retail olahraga besar, lewat distributor</span><span class="to">tertarik tap in ke Sidak Toko</span></li>
+      </ul>
     </div>
   </div>
 </section>
